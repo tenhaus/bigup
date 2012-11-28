@@ -17,6 +17,12 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self displayUserBackground];
+}
+
+- (void)displayUserBackground
+{
+
     NSScreen *screen = [NSScreen mainScreen];
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
     NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
