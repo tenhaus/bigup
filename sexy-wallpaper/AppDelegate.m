@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "CustomWindow.h"
 
 @implementation AppDelegate
 
@@ -14,10 +15,29 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
+CustomWindow *customWindow;
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     // Insert code here to initialize your application
+    [self.window setAlphaValue:0.0f];
+    [self.wallpaperScrollView setAlphaValue:0.0f];
+    
+    [self goFullScreen];
+    [self positionScrollView];
+    [self.wallpaperScrollView setAlphaValue:1.0f];
+
+    customWindow = (CustomWindow *)self.window;
+    [customWindow fadeInAndMakeKeyAndOrderFront:YES];
+    
     [self displayUserBackground];
+}
+
+- (void)goFullScreen
+{
+    NSScreen *screen = [NSScreen mainScreen];
+    NSRect screenFrame = [screen frame];
+    [self.window setFrame:screenFrame display:YES];
 }
 
 - (void)displayUserBackground
@@ -26,10 +46,24 @@
     NSScreen *screen = [NSScreen mainScreen];
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
     NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
+
+    
+    NSImage *background = [[NSImage alloc]initByReferencingURL:currentBackgroundUrl];
+    
+    [self.imageView setImage:background];
+    [self.imageView setFrame:[screen frame]];
+}
+
+- (void)positionScrollView
+{
+    NSScreen *screen = [NSScreen mainScreen];
     NSRect screenFrame = [screen frame];
     
-    [self.imageView setImageWithURL:currentBackgroundUrl];
-    [self.window setFrame:screenFrame display:YES];
+    NSRect scrollViewFrame;
+    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, screenFrame.size.height / 6);
+    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /2);
+    
+    [self.wallpaperScrollView setFrame:scrollViewFrame];
 }
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.tenhaus.sexy_wallpaper" in the user's Application Support directory.

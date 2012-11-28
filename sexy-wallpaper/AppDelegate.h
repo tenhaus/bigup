@@ -7,7 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import <Quartz/Quartz.h>
+#import "CustomView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -17,8 +17,10 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
-@property (weak) IBOutlet IKImageView *imageView;
-
 - (IBAction)saveAction:(id)sender;
+
+@property (weak) IBOutlet NSImageView *imageView;
+@property (weak) IBOutlet CustomView *customView;
+@property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 
 @end

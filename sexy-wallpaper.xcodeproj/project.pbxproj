@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
 		83442DF91665C7A00019B105 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF81665C7A00019B105 /* CustomView.m */; };
-		83442E0B1665D2630019B105 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
-		83442E0D1665D26E0019B105 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0C1665D26E0019B105 /* QuartzCore.framework */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C057165C9B39002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C055165C9B39002D81E7 /* InfoPlist.strings */; };
 		8380C059165C9B39002D81E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C058165C9B39002D81E7 /* main.m */; };
@@ -68,8 +66,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				83442E0D1665D26E0019B105 /* QuartzCore.framework in Frameworks */,
-				83442E0B1665D2630019B105 /* Quartz.framework in Frameworks */,
 				8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

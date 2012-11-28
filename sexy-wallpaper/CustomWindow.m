@@ -30,4 +30,25 @@
     return self;
 }
 
+- (void)fadeInAndMakeKeyAndOrderFront:(BOOL)orderFront
+{
+    if (orderFront)
+    {
+        [self makeKeyAndOrderFront:nil];
+    }
+
+    [[self animator] setAlphaValue:1.0];
+}
+
+- (void)fadeOutAndOrderOut:(BOOL)orderOut
+{
+    if (orderOut)
+    {
+        NSTimeInterval delay = [[NSAnimationContext currentContext] duration] + 0.1;
+        [self performSelector:@selector(orderOut:) withObject:nil afterDelay:delay];
+    }
+    
+    [[self animator] setAlphaValue:0.0];
+}
+
 @end
