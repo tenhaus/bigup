@@ -23,11 +23,7 @@ CustomWindow *customWindow;
 {
     [self.window setAlphaValue:0.0f];
 
-    [self.browserView setIntercellSpacing:NSMakeSize(30.0, 0)];
-//    [self.browserView setBackgroundColor:[NSColor clearColor]];
-    
-
-    
+//    [self.browserView setIntercellSpacing:NSMakeSize(30.0, 0)];
     
     NSScreen *screen = [NSScreen mainScreen];
     NSRect screenFrame = [screen frame];
@@ -37,6 +33,9 @@ CustomWindow *customWindow;
     [self goFullScreen:screenFrame];
     [self positionScrollView];
     [self loadImages:workspace screen:screen imageFrame:[self getImageFrame]];
+    
+    [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
+
 
     
     customWindow = (CustomWindow *)self.window;
@@ -79,6 +78,7 @@ CustomWindow *customWindow;
     scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
+    [self.browserView setFrame:scrollViewFrame];
 }
 
 

@@ -59,6 +59,20 @@
 
 @implementation ImageBrowserControllerController
 
+- (id)initWithWindow:(NSWindow *)window
+{
+    self = [super initWithWindow:window];
+    
+    if (self)
+    {
+        self.mImages = [[NSMutableArray alloc] init];
+        [self.imageBrowser setAnimates:YES];
+        [self.imageBrowser setContentResizingMask:NSViewWidthSizable];
+    }
+    
+    return self;
+}
+
 - (void)updateDatasource:(NSMutableArray *)images
 {
     NSEnumerator *e = [images objectEnumerator];
@@ -71,6 +85,10 @@
     }
     
     [self.imageBrowser reloadData];
+
+    /* update the zoom value to scale images */
+    [self.imageBrowser setZoomValue:2.0];
+    [self.imageBrowser setNeedsDisplay:YES];
 }
 
 - (void) addAnImageWithPath:(NSString *) path
@@ -90,25 +108,6 @@
 - (id) imageBrowser:(IKImageBrowserView *) view itemAtIndex:(int) index
 {
     return [self.mImages objectAtIndex:index];
-}
-
-- (id)initWithWindow:(NSWindow *)window
-{
-    self = [super initWithWindow:window];
-    
-    if (self)
-    {
-        self.mImages = [[NSMutableArray alloc] init];
-        
-        [self.imageBrowser setAnimates:YES];
-    }
-    
-    return self;
-}
-
-- (NSString *)  imageRepresentationType
-{
-    return IKImageBrowserPathRepresentationType;
 }
 
 - (void)windowDidLoad
