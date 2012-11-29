@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 #import "CustomView.h"
+#import "ImageBrowserControllerController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -27,6 +28,7 @@
 @property (weak) IBOutlet NSArrayController *tableArrayController;
 @property (weak) IBOutlet IKImageBrowserView *browserView;
 
-@property NSMutableDictionary *dictionary;
+//@property NSMutableDictionary *dictionary;
+@property (unsafe_unretained) IBOutlet ImageBrowserControllerController *imageBrowserController;
 
 @end

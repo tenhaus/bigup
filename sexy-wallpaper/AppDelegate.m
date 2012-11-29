@@ -45,53 +45,6 @@ CustomWindow *customWindow;
     [self displayUserBackground:workspace screen:screen];
 }
 
-- (NSUInteger) numberOfItemsInImageBrowser:(IKImageBrowserView *) aBrowser;
-{
-    return 1;
-}
-
-- (id) imageBrowser:(IKImageBrowserView *) aBrowser itemAtIndex:(NSUInteger)index; {
-
-//    NSURL *url = [self.dictionary objectForKey:[tableColumn identifier]];
-//    
-//    NSLog(@"Get image for %@", [url path]);
-//    
-//    NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-//    PointingImageView *imageView = [[PointingImageView alloc] init];
-//
-//    
-//    NSRect imageSize;
-//    imageSize.origin = CGPointMake(0.0, 0.0);
-//    imageSize.size = NSMakeSize(300.0, 275.0);
-//    
-//
-//    [imageView setFrame:imageSize];
-//    [imageView setImage:image];
-//
-//    [imageView sendAction:@selector(mouseDown:) to:self];
-//
-//    NSShadow *shadow = [[NSShadow alloc] init];
-//    [shadow setShadowColor:[NSColor blackColor]];
-//    [shadow setShadowBlurRadius:4.0f];
-//    [shadow setShadowOffset:CGSizeMake(4.0f, 4.0f)];
-//    
-//    [imageView setShadow:shadow];
-//
-//    
-//
-//    return imageView;
-}
-
-- (void)mouseDown:(id)sender
-{
-}
-
-- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
-{
-    return 275.0;
-}
-
-
 - (NSRect)getImageFrame
 {
     NSRect rect;
@@ -125,7 +78,7 @@ CustomWindow *customWindow;
     scrollViewFrame.size = CGSizeMake(screenFrame.size.width, screenFrame.size.height / 6);
     scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
     
-    [self.browserView setFrame:scrollViewFrame];
+    [self.wallpaperScrollView setFrame:scrollViewFrame];
 }
 
 
@@ -143,7 +96,7 @@ CustomWindow *customWindow;
 
     NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
     
-    self.dictionary = [[NSMutableDictionary alloc] init];
+    NSMutableArray *images = [[NSMutableArray alloc] init];
     
     for (NSURL *theURL in contents)
     {
@@ -156,24 +109,11 @@ CustomWindow *customWindow;
         }
         else
         {
-            NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-//            
-//            MyImageObject *item = [[MyImageObject alloc] init];
-//            item.url = imageURL;
-//            [images addObject:item];
-//            
-//            [item release];
-            
-//            NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:identifier];
-//            [column setWidth:300.0];
-            
-            [self.dictionary setObject:theURL forKey:identifier];
-//            [self.imageTable addTableColumn:column];
-            
+            [images addObject:theURL];
         }
-        
-//        [self.tableArrayController addObjects:dictionary];
     }
+    
+    [self.imageBrowserController updateDatasource:images];
 }
 
 

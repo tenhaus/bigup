@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832ECE161667F2F300465951 /* ImageBrowserControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserControllerController.m */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
 		83442DF91665C7A00019B105 /* CustomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF81665C7A00019B105 /* CustomView.m */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
@@ -37,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832ECE141667F2F300465951 /* ImageBrowserControllerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserControllerController.h; sourceTree = "<group>"; };
+		832ECE151667F2F300465951 /* ImageBrowserControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserControllerController.m; sourceTree = "<group>"; };
 		83442DEF1665C6EC0019B105 /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442DF71665C7A00019B105 /* CustomView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomView.h; sourceTree = "<group>"; };
@@ -149,6 +152,8 @@
 				83442DF81665C7A00019B105 /* CustomView.m */,
 				83FBCA1E166717CA0099E1B4 /* PointingImageView.h */,
 				83FBCA1F166717CA0099E1B4 /* PointingImageView.m */,
+				832ECE141667F2F300465951 /* ImageBrowserControllerController.h */,
+				832ECE151667F2F300465951 /* ImageBrowserControllerController.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				83442DF91665C7A00019B105 /* CustomView.m in Sources */,
 				83CF9A131666C4E9004080E1 /* ImageTable.m in Sources */,
 				83FBCA20166717CA0099E1B4 /* PointingImageView.m in Sources */,
+				832ECE161667F2F300465951 /* ImageBrowserControllerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
