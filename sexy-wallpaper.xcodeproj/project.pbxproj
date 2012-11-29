@@ -20,6 +20,7 @@
 		8380C06F165C9B3A002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
+		83CF9A131666C4E9004080E1 /* ImageTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CF9A121666C4E9004080E1 /* ImageTable.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		8380C076165C9B3A002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C078165C9B3A002D81E7 /* sexy_wallpaperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sexy_wallpaperTests.h; sourceTree = "<group>"; };
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
+		83CF9A111666C4E9004080E1 /* ImageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTable.h; sourceTree = "<group>"; };
+		83CF9A121666C4E9004080E1 /* ImageTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTable.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +132,8 @@
 				8380C05E165C9B39002D81E7 /* AppDelegate.h */,
 				8380C05F165C9B39002D81E7 /* AppDelegate.m */,
 				8380C061165C9B39002D81E7 /* MainMenu.xib */,
+				83CF9A111666C4E9004080E1 /* ImageTable.h */,
+				83CF9A121666C4E9004080E1 /* ImageTable.m */,
 				8380C064165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld */,
 				8380C053165C9B39002D81E7 /* Supporting Files */,
 				83442DEF1665C6EC0019B105 /* CustomWindow.h */,
@@ -283,6 +288,7 @@
 				8380C066165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld in Sources */,
 				83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */,
 				83442DF91665C7A00019B105 /* CustomView.m in Sources */,
+				83CF9A131666C4E9004080E1 /* ImageTable.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

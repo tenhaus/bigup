@@ -17,37 +17,117 @@
 
 CustomWindow *customWindow;
 
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    // Insert code here to initialize your application
     [self.window setAlphaValue:0.0f];
-    [self.wallpaperScrollView setAlphaValue:0.0f];
     
-    [self goFullScreen];
+    [self.imageTable setIntercellSpacing:NSMakeSize(30.0, 0)];
+    [self.imageTable setBackgroundColor:[NSColor clearColor]];
+    [self.imageTable setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
+    
+    
+    NSScreen *screen = [NSScreen mainScreen];
+    NSRect screenFrame = [screen frame];
+    
+    NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+    
+    [self goFullScreen:screenFrame];
     [self positionScrollView];
-    [self.wallpaperScrollView setAlphaValue:1.0f];
+    [self loadImages:workspace screen:screen imageFrame:[self getImageFrame]];
 
+    
     customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
     
-    [self displayUserBackground];
+    [self displayUserBackground:workspace screen:screen];
 }
 
-- (void)goFullScreen
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
 {
-    NSScreen *screen = [NSScreen mainScreen];
-    NSRect screenFrame = [screen frame];
+    return 1;
+}
+
+- (NSView *)tableView:(NSTableView *)tableView
+   viewForTableColumn:(NSTableColumn *)tableColumn
+                  row:(NSInteger)row {
+
+    NSURL *url = [self.dictionary objectForKey:[tableColumn identifier]];
+    
+    NSLog(@"Get image for %@", [url path]);
+    
+    NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
+    NSImageView *imageView = [[NSImageView alloc] init];
+    
+    NSRect imageSize;
+    imageSize.origin = CGPointMake(0.0, 0.0);
+    imageSize.size = NSMakeSize(300.0, 275.0);
+    
+//    [image setSize:NSMakeSize(300.0, 275.0)];
+    [imageView setFrame:imageSize];
+    [imageView setImage:image];
+
+    NSShadow *shadow = [[NSShadow alloc] init];
+    [shadow setShadowColor:[NSColor blackColor]];
+    [shadow setShadowBlurRadius:4.0f];
+    [shadow setShadowOffset:CGSizeMake(4.0f, 4.0f)];
+    
+    [imageView setShadow:shadow];
+    
+
+    return imageView;
+    
+    
+//    // get an existing cell with the MyView identifier if it exists
+//    NSTextField *result = [tableView makeViewWithIdentifier:@"MyView" owner:self];
+//    
+//    // There is no existing cell to reuse so we will create a new one
+//    if (result == nil) {
+//        
+//        // create the new NSTextField with a frame of the {0,0} with the width of the table
+//        // note that the height of the frame is not really relevant, the row-height will modify the height
+//        // the new text field is then returned as an autoreleased object
+//        result = [[[NSTextField alloc] initWithFrame:...] autorelease];
+//        
+//        // the identifier of the NSTextField instance is set to MyView. This
+//        // allows it to be re-used
+//        result.identifier = @"MyView";
+//    }
+//    
+//    // result is now guaranteed to be valid, either as a re-used cell
+//    // or as a new cell, so set the stringValue of the cell to the
+//    // nameArray value at row
+//    result.stringValue = [self.nameArray objectAtIndex:row];
+//    
+//    // return the result.
+//    return result;
+    
+}
+
+- (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
+{
+    return 275.0;
+}
+
+
+- (NSRect)getImageFrame
+{
+    NSRect rect;
+    
+    rect.origin = CGPointMake(0.0, 0.0);
+    rect.size = CGSizeMake(300.0, 275.00);
+    
+    return rect;
+}
+
+- (void)goFullScreen:(NSRect)screenFrame
+{   
     [self.window setFrame:screenFrame display:YES];
 }
 
-- (void)displayUserBackground
+- (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen
 {
-
-    NSScreen *screen = [NSScreen mainScreen];
-    NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
-    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
-
-    
+    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];    
     NSImage *background = [[NSImage alloc]initByReferencingURL:currentBackgroundUrl];
     
     [self.imageView setImage:background];
@@ -61,10 +141,52 @@ CustomWindow *customWindow;
     
     NSRect scrollViewFrame;
     scrollViewFrame.size = CGSizeMake(screenFrame.size.width, screenFrame.size.height / 6);
-    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /2);
+    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
 }
+
+
+- (void)loadImages:(NSWorkspace *)workspace screen:(NSScreen *)screen imageFrame:(NSRect)imageFrame
+{
+    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
+    NSArray *pathParts = [currentBackgroundUrl pathComponents];
+
+    NSMutableArray *directoryPathParts = [[NSMutableArray alloc] initWithArray:pathParts];
+    [directoryPathParts removeObject:[directoryPathParts lastObject]];
+    
+    NSURL *directoryUrl = [[NSURL alloc] initFileURLWithPath:[directoryPathParts componentsJoinedByString:@"/"] isDirectory:YES];
+    
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+
+    NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
+    
+    self.dictionary = [[NSMutableDictionary alloc] init];
+    
+    for (NSURL *theURL in contents)
+    {
+        NSNumber *isDirectory;
+        [theURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:NULL];
+        
+        if([isDirectory boolValue] == YES)
+        {
+            
+        }
+        else
+        {
+            NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
+            NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:identifier];
+            [column setWidth:300.0];
+            
+            [self.dictionary setObject:theURL forKey:identifier];
+            [self.imageTable addTableColumn:column];
+            
+        }
+        
+//        [self.tableArrayController addObjects:dictionary];
+    }
+}
+
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.tenhaus.sexy_wallpaper" in the user's Application Support directory.
 - (NSURL *)applicationFilesDirectory

@@ -22,5 +22,9 @@
 @property (weak) IBOutlet NSImageView *imageView;
 @property (weak) IBOutlet CustomView *customView;
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
+@property (weak) IBOutlet NSTableView *imageTable;
+@property (weak) IBOutlet NSArrayController *tableArrayController;
+
+@property NSMutableDictionary *dictionary;
 
 @end
