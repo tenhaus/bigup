@@ -655,7 +655,7 @@
 													<string>NeXT TIFF v4.0 pasteboard type</string>
 												</object>
 											</object>
-											<string key="NSFrameSize">{604, 432}</string>
+											<string key="NSFrameSize">{604, 214}</string>
 											<reference key="NSSuperview" ref="567122810"/>
 											<reference key="NSWindow"/>
 											<bool key="NSViewWantsBestResolutionOpenGLSurface">YES</bool>
@@ -675,7 +675,7 @@
 											<reference key="delegate"/>
 										</object>
 									</object>
-									<string key="NSFrame">{{1, 1}, {604, 432}}</string>
+									<string key="NSFrame">{{1, 1}, {604, 214}}</string>
 									<reference key="NSSuperview" ref="107432830"/>
 									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="681365054"/>
@@ -687,7 +687,7 @@
 								<object class="NSScroller" id="445234670">
 									<reference key="NSNextResponder" ref="107432830"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{589, 1}, {16, 432}}</string>
+									<string key="NSFrame">{{589, 1}, {16, 214}}</string>
 									<reference key="NSSuperview" ref="107432830"/>
 									<reference key="NSWindow"/>
 									<string key="NSReuseIdentifierKey">_NS:26</string>
@@ -700,7 +700,7 @@
 								<object class="NSScroller" id="162229765">
 									<reference key="NSNextResponder" ref="107432830"/>
 									<int key="NSvFlags">256</int>
-									<string key="NSFrame">{{1, 417}, {604, 16}}</string>
+									<string key="NSFrame">{{1, 199}, {604, 16}}</string>
 									<reference key="NSSuperview" ref="107432830"/>
 									<reference key="NSWindow"/>
 									<string key="NSReuseIdentifierKey">_NS:30</string>
@@ -711,7 +711,7 @@
 									<double key="NSPercent">0.50602412223815918</double>
 								</object>
 							</object>
-							<string key="NSFrame">{{19, 45}, {606, 434}}</string>
+							<string key="NSFrame">{{19, 263}, {606, 216}}</string>
 							<reference key="NSSuperview" ref="438407890"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="567122810"/>
@@ -2634,10 +2634,12 @@
 							<string>changeLocationAction:</string>
 							<string>fillColorAction:</string>
 							<string>scalingAction:</string>
+							<string>screensMenuAction:</string>
 							<string>zoomSliderDidChange:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -2653,6 +2655,7 @@
 							<string>changeLocationAction:</string>
 							<string>fillColorAction:</string>
 							<string>scalingAction:</string>
+							<string>screensMenuAction:</string>
 							<string>zoomSliderDidChange:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
@@ -2671,6 +2674,10 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">scalingAction:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">screensMenuAction:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

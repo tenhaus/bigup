@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CustomWindow.h"
+#import "PointingImageView.h"
 
 @implementation AppDelegate
 
@@ -57,7 +58,8 @@ CustomWindow *customWindow;
     NSLog(@"Get image for %@", [url path]);
     
     NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-    NSImageView *imageView = [[NSImageView alloc] init];
+    PointingImageView *imageView = [[PointingImageView alloc] init];
+
     
     NSRect imageSize;
     imageSize.origin = CGPointMake(0.0, 0.0);
@@ -66,6 +68,10 @@ CustomWindow *customWindow;
 //    [image setSize:NSMakeSize(300.0, 275.0)];
     [imageView setFrame:imageSize];
     [imageView setImage:image];
+    
+//    imageView.target = self;
+//    imageView.action = @selector(mouseDown:);
+    [imageView sendAction:@selector(mouseDown:) to:self];
 
     NSShadow *shadow = [[NSShadow alloc] init];
     [shadow setShadowColor:[NSColor blackColor]];
@@ -73,35 +79,14 @@ CustomWindow *customWindow;
     [shadow setShadowOffset:CGSizeMake(4.0f, 4.0f)];
     
     [imageView setShadow:shadow];
+
     
 
     return imageView;
-    
-    
-//    // get an existing cell with the MyView identifier if it exists
-//    NSTextField *result = [tableView makeViewWithIdentifier:@"MyView" owner:self];
-//    
-//    // There is no existing cell to reuse so we will create a new one
-//    if (result == nil) {
-//        
-//        // create the new NSTextField with a frame of the {0,0} with the width of the table
-//        // note that the height of the frame is not really relevant, the row-height will modify the height
-//        // the new text field is then returned as an autoreleased object
-//        result = [[[NSTextField alloc] initWithFrame:...] autorelease];
-//        
-//        // the identifier of the NSTextField instance is set to MyView. This
-//        // allows it to be re-used
-//        result.identifier = @"MyView";
-//    }
-//    
-//    // result is now guaranteed to be valid, either as a re-used cell
-//    // or as a new cell, so set the stringValue of the cell to the
-//    // nameArray value at row
-//    result.stringValue = [self.nameArray objectAtIndex:row];
-//    
-//    // return the result.
-//    return result;
-    
+}
+
+- (void)mouseDown:(id)sender
+{
 }
 
 - (CGFloat)tableView:(NSTableView *)tableView heightOfRow:(NSInteger)row
