@@ -22,10 +22,11 @@ CustomWindow *customWindow;
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [self.window setAlphaValue:0.0f];
+
+    [self.browserView setIntercellSpacing:NSMakeSize(30.0, 0)];
+//    [self.browserView setBackgroundColor:[NSColor clearColor]];
     
-    [self.imageTable setIntercellSpacing:NSMakeSize(30.0, 0)];
-    [self.imageTable setBackgroundColor:[NSColor clearColor]];
-    [self.imageTable setSelectionHighlightStyle:NSTableViewSelectionHighlightStyleNone];
+
     
     
     NSScreen *screen = [NSScreen mainScreen];
@@ -44,45 +45,41 @@ CustomWindow *customWindow;
     [self displayUserBackground:workspace screen:screen];
 }
 
-- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView
+- (NSUInteger) numberOfItemsInImageBrowser:(IKImageBrowserView *) aBrowser;
 {
     return 1;
 }
 
-- (NSView *)tableView:(NSTableView *)tableView
-   viewForTableColumn:(NSTableColumn *)tableColumn
-                  row:(NSInteger)row {
+- (id) imageBrowser:(IKImageBrowserView *) aBrowser itemAtIndex:(NSUInteger)index; {
 
-    NSURL *url = [self.dictionary objectForKey:[tableColumn identifier]];
-    
-    NSLog(@"Get image for %@", [url path]);
-    
-    NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
-    PointingImageView *imageView = [[PointingImageView alloc] init];
-
-    
-    NSRect imageSize;
-    imageSize.origin = CGPointMake(0.0, 0.0);
-    imageSize.size = NSMakeSize(300.0, 275.0);
-    
-//    [image setSize:NSMakeSize(300.0, 275.0)];
-    [imageView setFrame:imageSize];
-    [imageView setImage:image];
-    
-//    imageView.target = self;
-//    imageView.action = @selector(mouseDown:);
-    [imageView sendAction:@selector(mouseDown:) to:self];
-
-    NSShadow *shadow = [[NSShadow alloc] init];
-    [shadow setShadowColor:[NSColor blackColor]];
-    [shadow setShadowBlurRadius:4.0f];
-    [shadow setShadowOffset:CGSizeMake(4.0f, 4.0f)];
-    
-    [imageView setShadow:shadow];
-
-    
-
-    return imageView;
+//    NSURL *url = [self.dictionary objectForKey:[tableColumn identifier]];
+//    
+//    NSLog(@"Get image for %@", [url path]);
+//    
+//    NSImage *image = [[NSImage alloc] initWithContentsOfURL:url];
+//    PointingImageView *imageView = [[PointingImageView alloc] init];
+//
+//    
+//    NSRect imageSize;
+//    imageSize.origin = CGPointMake(0.0, 0.0);
+//    imageSize.size = NSMakeSize(300.0, 275.0);
+//    
+//
+//    [imageView setFrame:imageSize];
+//    [imageView setImage:image];
+//
+//    [imageView sendAction:@selector(mouseDown:) to:self];
+//
+//    NSShadow *shadow = [[NSShadow alloc] init];
+//    [shadow setShadowColor:[NSColor blackColor]];
+//    [shadow setShadowBlurRadius:4.0f];
+//    [shadow setShadowOffset:CGSizeMake(4.0f, 4.0f)];
+//    
+//    [imageView setShadow:shadow];
+//
+//    
+//
+//    return imageView;
 }
 
 - (void)mouseDown:(id)sender
@@ -112,7 +109,7 @@ CustomWindow *customWindow;
 
 - (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen
 {
-    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];    
+    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
     NSImage *background = [[NSImage alloc]initByReferencingURL:currentBackgroundUrl];
     
     [self.imageView setImage:background];
@@ -128,7 +125,7 @@ CustomWindow *customWindow;
     scrollViewFrame.size = CGSizeMake(screenFrame.size.width, screenFrame.size.height / 6);
     scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
     
-    [self.wallpaperScrollView setFrame:scrollViewFrame];
+    [self.browserView setFrame:scrollViewFrame];
 }
 
 
@@ -160,17 +157,25 @@ CustomWindow *customWindow;
         else
         {
             NSString *identifier = [[NSProcessInfo processInfo] globallyUniqueString];
-            NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:identifier];
-            [column setWidth:300.0];
+//            
+//            MyImageObject *item = [[MyImageObject alloc] init];
+//            item.url = imageURL;
+//            [images addObject:item];
+//            
+//            [item release];
+            
+//            NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:identifier];
+//            [column setWidth:300.0];
             
             [self.dictionary setObject:theURL forKey:identifier];
-            [self.imageTable addTableColumn:column];
+//            [self.imageTable addTableColumn:column];
             
         }
         
 //        [self.tableArrayController addObjects:dictionary];
     }
 }
+
 
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.tenhaus.sexy_wallpaper" in the user's Application Support directory.
