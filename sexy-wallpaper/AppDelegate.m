@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "CustomWindow.h"
-#import "PointingImageView.h"
 
 @implementation AppDelegate
 
@@ -18,9 +17,35 @@
 
 CustomWindow *customWindow;
 
+//CGGradientRef myGradient;
+//CGColorSpaceRef myColorspace;
+//size_t num_locations = 2;
+//CGFloat locations[2] = { 0.0, 1.0 };
+//CGFloat components[8] = { 1.0, 0.5, 0.4, 1.0,  // Start color
+//    0.8, 0.8, 0.3, 1.0 }; // End color
+
+
+//CGContextRef myContext = [[NSGraphicsContext // 1
+//                           currentContext] graphicsPort];
+//
+//CGPoint myStartPoint, myEndPoint;
+//myStartPoint.x = 0.0;
+//myStartPoint.y = 0.0;
+//myEndPoint.x = 1000.0;
+//myEndPoint.y = 1000.0;
+//CGContextDrawLinearGradient(myContext, myGradient, myStartPoint, myEndPoint, 0);
+
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(handleUserSelectedBackground:)
+                                                 name:@"userSelectedBackground"
+                                               object:nil];
+    
+//    myColorspace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
+//    myGradient = CGGradientCreateWithColorComponents (myColorspace, components,
+//                                                      locations, num_locations);
     [self.window setAlphaValue:0.0f];
 
 //    [self.browserView setIntercellSpacing:NSMakeSize(30.0, 0)];
@@ -31,11 +56,11 @@ CustomWindow *customWindow;
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
     
     [self goFullScreen:screenFrame];
-    [self positionScrollView];
+    [self configureBrowserView];
     [self loadImages:workspace screen:screen imageFrame:[self getImageFrame]];
     
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
-
+    
 
     
     customWindow = (CustomWindow *)self.window;
@@ -43,6 +68,32 @@ CustomWindow *customWindow;
     
     [self displayUserBackground:workspace screen:screen];
 }
+
+-(void)handleUserSelectedBackground:(NSNotification *)notification
+{
+    NSScreen *curScreen = [NSScreen mainScreen];    
+    NSDictionary *screenOptions = [[NSWorkspace sharedWorkspace] desktopImageOptionsForScreen:curScreen];
+
+    NSURL *imageUrl = [[notification userInfo] objectForKey:@"url"];
+    
+    NSError *error = nil;
+    [[NSWorkspace sharedWorkspace] setDesktopImageURL:imageUrl
+                                            forScreen:curScreen
+                                              options:screenOptions
+                                                error:&error];
+    if (error)
+    {
+        [NSApp presentError:error];
+    }
+    else
+    {
+        NSImage *background = [[NSImage alloc]initByReferencingURL:imageUrl];
+        
+        [self.imageView setImage:background];
+        [self.imageView setFrame:[curScreen frame]];
+    }
+}
+
 
 - (NSRect)getImageFrame
 {
@@ -68,17 +119,25 @@ CustomWindow *customWindow;
     [self.imageView setFrame:[screen frame]];
 }
 
-- (void)positionScrollView
+- (void)configureBrowserView
 {
     NSScreen *screen = [NSScreen mainScreen];
     NSRect screenFrame = [screen frame];
     
+    int maxImageHeight = screenFrame.size.height / 6;
+    
     NSRect scrollViewFrame;
-    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, screenFrame.size.height / 6);
+    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
     scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
     [self.browserView setFrame:scrollViewFrame];
+    
+
+    
+    [self.browserView setContentResizingMask:NSViewWidthSizable];
+    [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
+    [self.browserView setCellSize:NSMakeSize( 400, maxImageHeight)];
 }
 
 

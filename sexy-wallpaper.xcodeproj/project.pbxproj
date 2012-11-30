@@ -22,7 +22,6 @@
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
 		83CF9A131666C4E9004080E1 /* ImageTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CF9A121666C4E9004080E1 /* ImageTable.m */; };
-		83FBCA20166717CA0099E1B4 /* PointingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FBCA1F166717CA0099E1B4 /* PointingImageView.m */; };
 		83FBCA25166724920099E1B4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
 		83FBCA26166724920099E1B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0C1665D26E0019B105 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -68,8 +67,6 @@
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
 		83CF9A111666C4E9004080E1 /* ImageTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageTable.h; sourceTree = "<group>"; };
 		83CF9A121666C4E9004080E1 /* ImageTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageTable.m; sourceTree = "<group>"; };
-		83FBCA1E166717CA0099E1B4 /* PointingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointingImageView.h; sourceTree = "<group>"; };
-		83FBCA1F166717CA0099E1B4 /* PointingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointingImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,8 +147,6 @@
 				83442DF01665C6EC0019B105 /* CustomWindow.m */,
 				83442DF71665C7A00019B105 /* CustomView.h */,
 				83442DF81665C7A00019B105 /* CustomView.m */,
-				83FBCA1E166717CA0099E1B4 /* PointingImageView.h */,
-				83FBCA1F166717CA0099E1B4 /* PointingImageView.m */,
 				832ECE141667F2F300465951 /* ImageBrowserControllerController.h */,
 				832ECE151667F2F300465951 /* ImageBrowserControllerController.m */,
 			);
@@ -303,7 +298,6 @@
 				83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */,
 				83442DF91665C7A00019B105 /* CustomView.m in Sources */,
 				83CF9A131666C4E9004080E1 /* ImageTable.m in Sources */,
-				83FBCA20166717CA0099E1B4 /* PointingImageView.m in Sources */,
 				832ECE161667F2F300465951 /* ImageBrowserControllerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -67,7 +67,6 @@
     {
         self.mImages = [[NSMutableArray alloc] init];
         [self.imageBrowser setAnimates:YES];
-        [self.imageBrowser setContentResizingMask:NSViewWidthSizable];
     }
     
     return self;
@@ -85,10 +84,6 @@
     }
     
     [self.imageBrowser reloadData];
-
-    /* update the zoom value to scale images */
-    [self.imageBrowser setZoomValue:2.0];
-    [self.imageBrowser setNeedsDisplay:YES];
 }
 
 - (void) addAnImageWithPath:(NSString *) path
@@ -110,11 +105,25 @@
     return [self.mImages objectAtIndex:index];
 }
 
-- (void)windowDidLoad
+- (void)imageBrowserSelectionDidChange:(IKImageBrowserView *)aBrowser
 {
-    [super windowDidLoad];
+	NSIndexSet *selectionIndexes = [aBrowser selectionIndexes];
     
-    // Implement this method to handle any initialization after your window controller's window has been loaded from its nib file.
+	if ([selectionIndexes count] > 0)
+	{   
+        myImageObject *anItem = [self.mImages objectAtIndex:[selectionIndexes firstIndex]];
+        
+		NSURL *url = [[NSURL alloc] initFileURLWithPath:[anItem imageRepresentation]];
+        
+        NSNumber *isDirectoryFlag = nil;
+        if ([url getResourceValue:&isDirectoryFlag forKey:NSURLIsDirectoryKey error:nil] && ![isDirectoryFlag boolValue])
+        {
+            NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
+            [dataDict setObject:url forKey:@"url"];
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"userSelectedBackground" object:self userInfo:dataDict];            
+        }
+	}
 }
 
 @end
