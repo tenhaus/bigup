@@ -42,7 +42,7 @@ CustomWindow *customWindow;
                                              selector:@selector(handleUserSelectedBackground:)
                                                  name:@"userSelectedBackground"
                                                object:nil];
-    
+
 //    myColorspace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
 //    myGradient = CGGradientCreateWithColorComponents (myColorspace, components,
 //                                                      locations, num_locations);
@@ -87,10 +87,7 @@ CustomWindow *customWindow;
     }
     else
     {
-        NSImage *background = [[NSImage alloc]initByReferencingURL:imageUrl];
-        
-        [self.imageView setImage:background];
-        [self.imageView setFrame:[curScreen frame]];
+        [self displayImageAtURL:imageUrl onScreen:curScreen];
     }
 }
 
@@ -110,13 +107,47 @@ CustomWindow *customWindow;
     [self.window setFrame:screenFrame display:YES];
 }
 
+- (void)displayImageAtURL:(NSURL *)url onScreen:(NSScreen *)screen
+{
+    CGFloat wZoomRatio, hZoomRatio, zoomRatio = 0.0;
+    
+    NSRect screenFrame = [screen frame];
+    
+    NSImage *tmpImage = [[NSImage alloc] initByReferencingURL:url];
+    NSArray *reps = [tmpImage representations];
+
+    CGFloat imageWidth = 0.0;
+    CGFloat imageHeight = 0.0;
+
+    CGFloat newImageWidth = 0.0;
+    CGFloat newImageHeight = 0.0;
+    
+    CGFloat hBoundAdjustment = 0.0;
+    
+    for (NSImageRep * imageRep in reps)
+    {
+        if ([imageRep pixelsWide] > imageWidth) imageWidth = [imageRep pixelsWide];
+        if ([imageRep pixelsHigh] > imageHeight) imageHeight = [imageRep pixelsHigh];
+    }
+    
+    wZoomRatio = screenFrame.size.width / imageWidth;
+    hZoomRatio = screenFrame.size.height / imageHeight;
+    
+    zoomRatio = MAX(wZoomRatio, hZoomRatio);
+    
+    newImageHeight = imageHeight * zoomRatio;
+    newImageWidth = imageWidth * zoomRatio;
+    hBoundAdjustment = (newImageHeight - imageHeight) / 2;
+
+    [self.imageView setImageWithURL:url];
+    [self.imageView setImageZoomFactor:zoomRatio centerPoint:NSMakePoint(0.0, 0.0)];
+    [self.imageView setFrame:NSMakeRect((screenFrame.size.width - newImageWidth)/2, (screenFrame.size.height - newImageHeight)/2, newImageWidth, newImageHeight)];
+}
+
 - (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen
 {
     NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
-    NSImage *background = [[NSImage alloc]initByReferencingURL:currentBackgroundUrl];
-    
-    [self.imageView setImage:background];
-    [self.imageView setFrame:[screen frame]];
+    [self displayImageAtURL:currentBackgroundUrl onScreen:screen];
 }
 
 - (void)configureBrowserView

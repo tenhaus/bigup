@@ -21,14 +21,13 @@
 
 - (IBAction)saveAction:(id)sender;
 
-@property (weak) IBOutlet NSImageView *imageView;
 @property (weak) IBOutlet CustomView *customView;
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
-//@property (weak) IBOutlet NSTableView *imageTable;
 @property (weak) IBOutlet NSArrayController *tableArrayController;
 @property (weak) IBOutlet IKImageBrowserView *browserView;
 
-//@property NSMutableDictionary *dictionary;
+@property (weak) IBOutlet IKImageView *imageView;
+
 @property (unsafe_unretained) IBOutlet ImageBrowserControllerController *imageBrowserController;
 
 @end
