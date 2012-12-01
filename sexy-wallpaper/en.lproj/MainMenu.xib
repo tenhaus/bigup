@@ -1328,8 +1328,8 @@
 							<bool key="editable">NO</bool>
 							<bool key="doubleClickOpensImageEditPanel">NO</bool>
 							<object class="NSColor" key="backgroundColor">
-								<int key="NSColorSpace">2</int>
-								<bytes key="NSRGB">MC41MDAwMjI4OSAwLjUwMDAyMjg5IDAuNTAwMDIyODkAA</bytes>
+								<int key="NSColorSpace">1</int>
+								<bytes key="NSRGB">MCAwIDAAA</bytes>
 							</object>
 						</object>
 						<object class="NSScrollView" id="896519677">
@@ -1505,7 +1505,7 @@
 											<string key="NSFrameSize">{292, 190}</string>
 											<reference key="NSSuperview" ref="58034010"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="818367071"/>
+											<reference key="NSNextKeyView" ref="649720752"/>
 											<bool key="NSViewWantsBestResolutionOpenGLSurface">YES</bool>
 											<string key="NSReuseIdentifierKey">_NS:24</string>
 											<bool key="constrainsToOriginalSize">NO</bool>
@@ -1530,13 +1530,8 @@
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="77353830"/>
 									<object class="NSColor" key="NSBGColor">
-										<int key="NSColorSpace">6</int>
-										<string key="NSCatalogName">System</string>
-										<string key="NSColorName">controlColor</string>
-										<object class="NSColor" key="NSColor">
-											<int key="NSColorSpace">3</int>
-											<bytes key="NSWhite">MC42NjY2NjY2NjY3AA</bytes>
-										</object>
+										<int key="NSColorSpace">1</int>
+										<bytes key="NSRGB">MC4yMjIxNDY3MzkxIDAuMjIyMTQ2NzM5MSAwLjIyMjE0NjczOTEAA</bytes>
 									</object>
 									<int key="NScvFlags">2</int>
 								</object>
@@ -1571,7 +1566,7 @@
 							<string key="NSFrame">{{163, 92}, {292, 190}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="649720752"/>
+							<reference key="NSNextKeyView" ref="58034010"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">203296</int>
 							<reference key="NSVScroller" ref="649720752"/>
@@ -3490,7 +3485,6 @@
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{380, 496}, {480, 360}}</string>
 				<boolean value="NO" key="371.NSWindowTemplate.visibleAtLaunch"/>
-				<string key="372.CustomClassName">CustomView</string>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="375.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="376.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3654,14 +3648,6 @@
 					<object class="IBClassDescriptionSource" key="sourceIdentifier">
 						<string key="majorKey">IBProjectSource</string>
 						<string key="minorKey">./Classes/AppDelegate.h</string>
-					</object>
-				</object>
-				<object class="IBPartialClassDescription">
-					<string key="className">CustomView</string>
-					<string key="superclassName">NSView</string>
-					<object class="IBClassDescriptionSource" key="sourceIdentifier">
-						<string key="majorKey">IBProjectSource</string>
-						<string key="minorKey">./Classes/CustomView.h</string>
 					</object>
 				</object>
 				<object class="IBPartialClassDescription">

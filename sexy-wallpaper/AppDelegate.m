@@ -181,9 +181,7 @@ CustomWindow *customWindow;
     [directoryPathParts removeObject:[directoryPathParts lastObject]];
     
     NSURL *directoryUrl = [[NSURL alloc] initFileURLWithPath:[directoryPathParts componentsJoinedByString:@"/"] isDirectory:YES];
-    
     NSFileManager *fileManager = [NSFileManager defaultManager];
-
     NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
     
     NSMutableArray *images = [[NSMutableArray alloc] init];

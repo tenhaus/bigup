@@ -7,11 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
-#import "CustomView.h"
 
 @interface CustomWindow : NSWindow
 
-@property (weak) IBOutlet CustomView *customView;
+
 
 - (void)fadeInAndMakeKeyAndOrderFront:(BOOL)orderFront;
 

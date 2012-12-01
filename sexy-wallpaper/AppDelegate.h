@@ -8,7 +8,6 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
-#import "CustomView.h"
 #import "ImageBrowserControllerController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -21,7 +20,6 @@
 
 - (IBAction)saveAction:(id)sender;
 
-@property (weak) IBOutlet CustomView *customView;
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 @property (weak) IBOutlet NSArrayController *tableArrayController;
 @property (weak) IBOutlet IKImageBrowserView *browserView;
