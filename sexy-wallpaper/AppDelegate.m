@@ -155,7 +155,7 @@
     
     NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl
                                         includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLContentModificationDateKey, NSURLIsDirectoryKey, nil]
-                                                           options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
+                                                           options:NSDirectoryEnumerationSkipsHiddenFiles | NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
     
     NSMutableArray *images = [[NSMutableArray alloc] init];
     
