@@ -152,18 +152,21 @@
     
     NSURL *directoryUrl = [[NSURL alloc] initFileURLWithPath:[directoryPathParts componentsJoinedByString:@"/"] isDirectory:YES];
     NSFileManager *fileManager = [NSFileManager defaultManager];
-    NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl includingPropertiesForKeys:nil options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
+    
+    NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl
+                                        includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLContentModificationDateKey, NSURLIsDirectoryKey, nil]
+                                                           options:NSDirectoryEnumerationSkipsHiddenFiles errorHandler:nil];
     
     NSMutableArray *images = [[NSMutableArray alloc] init];
     
     for (NSURL *theURL in contents)
     {
         NSNumber *isDirectory;
-        [theURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:NULL];
+
+        [theURL getResourceValue:&isDirectory forKey:NSURLIsDirectoryKey error:nil];
         
         if([isDirectory boolValue] == YES)
         {
-            
         }
         else
         {

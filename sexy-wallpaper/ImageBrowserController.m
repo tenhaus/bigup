@@ -12,6 +12,7 @@
 @interface myImageObject : NSObject
 {
     NSString *_path;
+    NSDate *_modificationDate;
 }
 @end
 
@@ -24,6 +25,14 @@
     if(_path != path)
     {
         _path = path;
+    }
+}
+
+-(void)setModificationDate:(NSDate *)modificationDate
+{
+    if(_modificationDate != modificationDate)
+    {
+        _modificationDate = modificationDate;
     }
 }
 
@@ -73,25 +82,42 @@
 }
 
 - (void)updateDatasource:(NSMutableArray *)images
-{
+{   
     NSEnumerator *e = [images objectEnumerator];
     
     NSURL *url;
     
     while (url = [e nextObject])
     {
-        [self addAnImageWithPath:[url path]];
+        [self addAnImageAtURL:url];
     }
     
+    [self sortDataAndReload];
+
+}
+
+-(void) sortDataAndReload
+{
+    NSArray *sortedArray = [[NSArray alloc] init];
+    
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"modificationDate" ascending:NO];
+    sortedArray = [self.mImages sortedArrayUsingDescriptors:[NSArray arrayWithObject:sort]];
+    
+    self.mImages = [[NSMutableArray alloc] initWithArray:sortedArray];
     [self.imageBrowser reloadData];
 }
 
-- (void) addAnImageWithPath:(NSString *) path
+- (void) addAnImageAtURL:(NSURL *)url
 {
     myImageObject *p;
     
+    NSDate *modificationDate;
+    [url getResourceValue:&modificationDate forKey:NSURLContentModificationDateKey error:nil];
+    
     p = [[myImageObject alloc] init];
-    [p setPath:path];
+    [p setPath:[url path]];
+    [p setModificationDate:modificationDate];
+    
     [self.mImages addObject:p];
 }
 
