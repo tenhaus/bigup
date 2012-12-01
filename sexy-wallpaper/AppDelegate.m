@@ -15,27 +15,6 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
-CustomWindow *customWindow;
-
-//CGGradientRef myGradient;
-//CGColorSpaceRef myColorspace;
-//size_t num_locations = 2;
-//CGFloat locations[2] = { 0.0, 1.0 };
-//CGFloat components[8] = { 1.0, 0.5, 0.4, 1.0,  // Start color
-//    0.8, 0.8, 0.3, 1.0 }; // End color
-
-
-//CGContextRef myContext = [[NSGraphicsContext // 1
-//                           currentContext] graphicsPort];
-//
-//CGPoint myStartPoint, myEndPoint;
-//myStartPoint.x = 0.0;
-//myStartPoint.y = 0.0;
-//myEndPoint.x = 1000.0;
-//myEndPoint.y = 1000.0;
-//CGContextDrawLinearGradient(myContext, myGradient, myStartPoint, myEndPoint, 0);
-
-
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     [[NSNotificationCenter defaultCenter] addObserver:self
@@ -43,12 +22,7 @@ CustomWindow *customWindow;
                                                  name:@"userSelectedBackground"
                                                object:nil];
 
-//    myColorspace = CGColorSpaceCreateWithName(kCGColorSpaceGenericRGB);
-//    myGradient = CGGradientCreateWithColorComponents (myColorspace, components,
-//                                                      locations, num_locations);
     [self.window setAlphaValue:0.0f];
-
-//    [self.browserView setIntercellSpacing:NSMakeSize(30.0, 0)];
     
     NSScreen *screen = [NSScreen mainScreen];
     NSRect screenFrame = [screen frame];
@@ -61,12 +35,10 @@ CustomWindow *customWindow;
     
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
     
-
-    
-    customWindow = (CustomWindow *)self.window;
-    [customWindow fadeInAndMakeKeyAndOrderFront:YES];
-    
     [self displayUserBackground:workspace screen:screen];
+    
+    CustomWindow *customWindow = (CustomWindow *)self.window;
+    [customWindow fadeInAndMakeKeyAndOrderFront:YES];
 }
 
 -(void)handleUserSelectedBackground:(NSNotification *)notification
@@ -164,8 +136,6 @@ CustomWindow *customWindow;
     [self.wallpaperScrollView setFrame:scrollViewFrame];
     [self.browserView setFrame:scrollViewFrame];
     
-
-    
     [self.browserView setContentResizingMask:NSViewWidthSizable];
     [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
     [self.browserView setCellSize:NSMakeSize( 400, maxImageHeight)];
@@ -204,6 +174,7 @@ CustomWindow *customWindow;
     [self.imageBrowserController updateDatasource:images];
 }
 
+#pragma mark - Stock app code
 
 
 // Returns the directory the application uses to store the Core Data store file. This code uses a directory named "com.tenhaus.sexy_wallpaper" in the user's Application Support directory.
