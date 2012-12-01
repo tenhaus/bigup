@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		832ECE161667F2F300465951 /* ImageBrowserControllerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserControllerController.m */; };
+		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C057165C9B39002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C055165C9B39002D81E7 /* InfoPlist.strings */; };
@@ -35,8 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		832ECE141667F2F300465951 /* ImageBrowserControllerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserControllerController.h; sourceTree = "<group>"; };
-		832ECE151667F2F300465951 /* ImageBrowserControllerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserControllerController.m; sourceTree = "<group>"; };
+		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
+		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
 		83442DEF1665C6EC0019B105 /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442E0A1665D2630019B105 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -137,8 +137,8 @@
 				8380C053165C9B39002D81E7 /* Supporting Files */,
 				83442DEF1665C6EC0019B105 /* CustomWindow.h */,
 				83442DF01665C6EC0019B105 /* CustomWindow.m */,
-				832ECE141667F2F300465951 /* ImageBrowserControllerController.h */,
-				832ECE151667F2F300465951 /* ImageBrowserControllerController.m */,
+				832ECE141667F2F300465951 /* ImageBrowserController.h */,
+				832ECE151667F2F300465951 /* ImageBrowserController.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -286,7 +286,7 @@
 				8380C060165C9B39002D81E7 /* AppDelegate.m in Sources */,
 				8380C066165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld in Sources */,
 				83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */,
-				832ECE161667F2F300465951 /* ImageBrowserControllerController.m in Sources */,
+				832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

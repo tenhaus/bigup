@@ -9,7 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 
-@interface ImageBrowserControllerController : NSWindowController
+@interface ImageBrowserController : NSWindowController
 
 - (void)updateDatasource:(NSMutableArray *)images;
 

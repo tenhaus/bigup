@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
-#import "ImageBrowserControllerController.h"
+#import "ImageBrowserController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -26,6 +26,6 @@
 
 @property (weak) IBOutlet IKImageView *imageView;
 
-@property (unsafe_unretained) IBOutlet ImageBrowserControllerController *imageBrowserController;
+@property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
 
 @end

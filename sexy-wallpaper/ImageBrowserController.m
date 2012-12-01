@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 Christopher Hayen. All rights reserved.
 //
 
-#import "ImageBrowserControllerController.h"
+#import "ImageBrowserController.h"
 
 /* Our datasource object */
 @interface myImageObject : NSObject
@@ -53,11 +53,11 @@
 @end
 
 
-@interface ImageBrowserControllerController ()
+@interface ImageBrowserController ()
 
 @end
 
-@implementation ImageBrowserControllerController
+@implementation ImageBrowserController
 
 - (id)initWithWindow:(NSWindow *)window
 {
