@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8380C047165C9B39002D81E7"
                BuildableName = "sexy-wallpaper.app"
-               BlueprintName = "sexy-wallpaper"
-               ReferencedContainer = "container:sexy-wallpaper.xcodeproj">
+               BlueprintName = "Walled"
+               ReferencedContainer = "container:Walled.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8380C06B165C9B3A002D81E7"
                BuildableName = "sexy-wallpaperTests.octest"
-               BlueprintName = "sexy-wallpaperTests"
-               ReferencedContainer = "container:sexy-wallpaper.xcodeproj">
+               BlueprintName = "WalledTests"
+               ReferencedContainer = "container:Walled.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
             BuildableName = "sexy-wallpaper.app"
-            BlueprintName = "sexy-wallpaper"
-            ReferencedContainer = "container:sexy-wallpaper.xcodeproj">
+            BlueprintName = "Walled"
+            ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
             BuildableName = "sexy-wallpaper.app"
-            BlueprintName = "sexy-wallpaper"
-            ReferencedContainer = "container:sexy-wallpaper.xcodeproj">
+            BlueprintName = "Walled"
+            ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
             BuildableName = "sexy-wallpaper.app"
-            BlueprintName = "sexy-wallpaper"
-            ReferencedContainer = "container:sexy-wallpaper.xcodeproj">
+            BlueprintName = "Walled"
+            ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

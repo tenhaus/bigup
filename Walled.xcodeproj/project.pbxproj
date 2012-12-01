@@ -41,23 +41,23 @@
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442E0A1665D2630019B105 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		83442E0C1665D26E0019B105 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		8380C048165C9B39002D81E7 /* sexy-wallpaper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "sexy-wallpaper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8380C048165C9B39002D81E7 /* Walled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380C04C165C9B39002D81E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8380C04F165C9B39002D81E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		8380C050165C9B39002D81E7 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		8380C051165C9B39002D81E7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8380C054165C9B39002D81E7 /* sexy-wallpaper-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sexy-wallpaper-Info.plist"; sourceTree = "<group>"; };
+		8380C054165C9B39002D81E7 /* Walled-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Walled-Info.plist"; sourceTree = "<group>"; };
 		8380C056165C9B39002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C058165C9B39002D81E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		8380C05A165C9B39002D81E7 /* sexy-wallpaper-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "sexy-wallpaper-Prefix.pch"; sourceTree = "<group>"; };
+		8380C05A165C9B39002D81E7 /* Walled-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Walled-Prefix.pch"; sourceTree = "<group>"; };
 		8380C05C165C9B39002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
 		8380C05E165C9B39002D81E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8380C05F165C9B39002D81E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8380C062165C9B39002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8380C065165C9B39002D81E7 /* sexy_wallpaper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sexy_wallpaper.xcdatamodel; sourceTree = "<group>"; };
-		8380C06C165C9B3A002D81E7 /* sexy-wallpaperTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "sexy-wallpaperTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8380C06C165C9B3A002D81E7 /* WalledTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WalledTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380C06D165C9B3A002D81E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		8380C074165C9B3A002D81E7 /* sexy-wallpaperTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "sexy-wallpaperTests-Info.plist"; sourceTree = "<group>"; };
+		8380C074165C9B3A002D81E7 /* WalledTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WalledTests-Info.plist"; sourceTree = "<group>"; };
 		8380C076165C9B3A002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C078165C9B3A002D81E7 /* sexy_wallpaperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sexy_wallpaperTests.h; sourceTree = "<group>"; };
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
@@ -101,8 +101,8 @@
 		8380C049165C9B39002D81E7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8380C048165C9B39002D81E7 /* sexy-wallpaper.app */,
-				8380C06C165C9B3A002D81E7 /* sexy-wallpaperTests.octest */,
+				8380C048165C9B39002D81E7 /* Walled.app */,
+				8380C06C165C9B3A002D81E7 /* WalledTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,10 +146,10 @@
 		8380C053165C9B39002D81E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8380C054165C9B39002D81E7 /* sexy-wallpaper-Info.plist */,
+				8380C054165C9B39002D81E7 /* Walled-Info.plist */,
 				8380C055165C9B39002D81E7 /* InfoPlist.strings */,
 				8380C058165C9B39002D81E7 /* main.m */,
-				8380C05A165C9B39002D81E7 /* sexy-wallpaper-Prefix.pch */,
+				8380C05A165C9B39002D81E7 /* Walled-Prefix.pch */,
 				8380C05B165C9B39002D81E7 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
@@ -168,7 +168,7 @@
 		8380C073165C9B3A002D81E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				8380C074165C9B3A002D81E7 /* sexy-wallpaperTests-Info.plist */,
+				8380C074165C9B3A002D81E7 /* WalledTests-Info.plist */,
 				8380C075165C9B3A002D81E7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -177,9 +177,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8380C047165C9B39002D81E7 /* sexy-wallpaper */ = {
+		8380C047165C9B39002D81E7 /* Walled */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8380C07D165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "sexy-wallpaper" */;
+			buildConfigurationList = 8380C07D165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "Walled" */;
 			buildPhases = (
 				8380C044165C9B39002D81E7 /* Sources */,
 				8380C045165C9B39002D81E7 /* Frameworks */,
@@ -189,14 +189,14 @@
 			);
 			dependencies = (
 			);
-			name = "sexy-wallpaper";
+			name = Walled;
 			productName = "sexy-wallpaper";
-			productReference = 8380C048165C9B39002D81E7 /* sexy-wallpaper.app */;
+			productReference = 8380C048165C9B39002D81E7 /* Walled.app */;
 			productType = "com.apple.product-type.application";
 		};
-		8380C06B165C9B3A002D81E7 /* sexy-wallpaperTests */ = {
+		8380C06B165C9B3A002D81E7 /* WalledTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8380C080165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "sexy-wallpaperTests" */;
+			buildConfigurationList = 8380C080165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "WalledTests" */;
 			buildPhases = (
 				8380C067165C9B3A002D81E7 /* Sources */,
 				8380C068165C9B3A002D81E7 /* Frameworks */,
@@ -208,9 +208,9 @@
 			dependencies = (
 				8380C071165C9B3A002D81E7 /* PBXTargetDependency */,
 			);
-			name = "sexy-wallpaperTests";
+			name = WalledTests;
 			productName = "sexy-wallpaperTests";
-			productReference = 8380C06C165C9B3A002D81E7 /* sexy-wallpaperTests.octest */;
+			productReference = 8380C06C165C9B3A002D81E7 /* WalledTests.octest */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -222,7 +222,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Christopher Hayen";
 			};
-			buildConfigurationList = 8380C042165C9B39002D81E7 /* Build configuration list for PBXProject "sexy-wallpaper" */;
+			buildConfigurationList = 8380C042165C9B39002D81E7 /* Build configuration list for PBXProject "Walled" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -234,8 +234,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8380C047165C9B39002D81E7 /* sexy-wallpaper */,
-				8380C06B165C9B3A002D81E7 /* sexy-wallpaperTests */,
+				8380C047165C9B39002D81E7 /* Walled */,
+				8380C06B165C9B3A002D81E7 /* WalledTests */,
 			);
 		};
 /* End PBXProject section */
@@ -303,7 +303,7 @@
 /* Begin PBXTargetDependency section */
 		8380C071165C9B3A002D81E7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 8380C047165C9B39002D81E7 /* sexy-wallpaper */;
+			target = 8380C047165C9B39002D81E7 /* Walled */;
 			targetProxy = 8380C070165C9B3A002D81E7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -402,9 +402,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
-				INFOPLIST_FILE = "sexy-wallpaper/sexy-wallpaper-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "sexy-wallpaper/Walled-Prefix.pch";
+				INFOPLIST_FILE = "sexy-wallpaper/Walled-Info.plist";
+				PRODUCT_NAME = Walled;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -414,9 +414,9 @@
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
-				INFOPLIST_FILE = "sexy-wallpaper/sexy-wallpaper-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "sexy-wallpaper/Walled-Prefix.pch";
+				INFOPLIST_FILE = "sexy-wallpaper/Walled-Info.plist";
+				PRODUCT_NAME = Walled;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -429,8 +429,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
-				INFOPLIST_FILE = "sexy-wallpaperTests/sexy-wallpaperTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "sexy-wallpaperTests/WalledTests-Info.plist";
+				PRODUCT_NAME = WalledTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -444,8 +444,8 @@
 				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
-				INFOPLIST_FILE = "sexy-wallpaperTests/sexy-wallpaperTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "sexy-wallpaperTests/WalledTests-Info.plist";
+				PRODUCT_NAME = WalledTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -454,7 +454,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8380C042165C9B39002D81E7 /* Build configuration list for PBXProject "sexy-wallpaper" */ = {
+		8380C042165C9B39002D81E7 /* Build configuration list for PBXProject "Walled" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8380C07B165C9B3A002D81E7 /* Debug */,
@@ -463,7 +463,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8380C07D165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "sexy-wallpaper" */ = {
+		8380C07D165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "Walled" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8380C07E165C9B3A002D81E7 /* Debug */,
@@ -472,7 +472,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8380C080165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "sexy-wallpaperTests" */ = {
+		8380C080165C9B3A002D81E7 /* Build configuration list for PBXNativeTarget "WalledTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8380C081165C9B3A002D81E7 /* Debug */,
