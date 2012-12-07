@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8380C047165C9B39002D81E7"
-               BuildableName = "sexy-wallpaper.app"
+               BuildableName = "Walled.app"
                BlueprintName = "Walled"
                ReferencedContainer = "container:Walled.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "8380C06B165C9B3A002D81E7"
-               BuildableName = "sexy-wallpaperTests.octest"
+               BuildableName = "WalledTests.octest"
                BlueprintName = "WalledTests"
                ReferencedContainer = "container:Walled.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
-            BuildableName = "sexy-wallpaper.app"
+            BuildableName = "Walled.app"
             BlueprintName = "Walled"
             ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
-            BuildableName = "sexy-wallpaper.app"
+            BuildableName = "Walled.app"
             BlueprintName = "Walled"
             ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "8380C047165C9B39002D81E7"
-            BuildableName = "sexy-wallpaper.app"
+            BuildableName = "Walled.app"
             BlueprintName = "Walled"
             ReferencedContainer = "container:Walled.xcodeproj">
          </BuildableReference>

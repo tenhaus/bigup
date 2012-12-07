@@ -404,6 +404,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/Walled-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaper/Walled-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = Walled;
 				WRAPPER_EXTENSION = app;
 			};
@@ -416,6 +417,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/Walled-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaper/Walled-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = Walled;
 				WRAPPER_EXTENSION = app;
 			};
