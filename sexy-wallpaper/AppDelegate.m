@@ -17,6 +17,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [self registerDefaultPreferences];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserSelectedBackground:)
                                                  name:@"userSelectedBackground"
@@ -39,6 +40,18 @@
     
     CustomWindow *customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
+}
+
+-(void)registerDefaultPreferences
+{
+    NSString *url = @"/Library/Desktop Pictures";
+    
+    NSArray *wallDirectories = [[NSArray alloc] initWithObjects:url, nil];
+    
+    NSDictionary *appDefaults = [NSDictionary
+                                 dictionaryWithObjectsAndKeys:wallDirectories, @"Locations", url, @"CurrentLocation", nil];
+
+    [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 }
 
 -(void)handleUserSelectedBackground:(NSNotification *)notification
@@ -144,16 +157,12 @@
 
 - (void)loadImages:(NSWorkspace *)workspace screen:(NSScreen *)screen imageFrame:(NSRect)imageFrame
 {
-    NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
-    NSArray *pathParts = [currentBackgroundUrl pathComponents];
-
-    NSMutableArray *directoryPathParts = [[NSMutableArray alloc] initWithArray:pathParts];
-    [directoryPathParts removeObject:[directoryPathParts lastObject]];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
-    NSURL *directoryUrl = [[NSURL alloc] initFileURLWithPath:[directoryPathParts componentsJoinedByString:@"/"] isDirectory:YES];
+    NSURL *currentLocation = [defaults URLForKey:@"CurrentLocation"];
     NSFileManager *fileManager = [NSFileManager defaultManager];
     
-    NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:directoryUrl
+    NSDirectoryEnumerator *contents = [fileManager enumeratorAtURL:currentLocation
                                         includingPropertiesForKeys:[NSArray arrayWithObjects:NSURLContentModificationDateKey, NSURLIsDirectoryKey, nil]
                                                            options:NSDirectoryEnumerationSkipsHiddenFiles | NSDirectoryEnumerationSkipsSubdirectoryDescendants errorHandler:nil];
     
