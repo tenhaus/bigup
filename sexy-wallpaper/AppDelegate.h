@@ -9,10 +9,12 @@
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 #import "ImageBrowserController.h"
+#import "PreferencesWindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (retain) IBOutlet NSWindowController *preferenceWindow;
 
 @property (readonly, strong, nonatomic) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
@@ -27,5 +29,6 @@
 @property (weak) IBOutlet IKImageView *imageView;
 
 @property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
+@property (weak) IBOutlet NSPopUpButton *locationsPopUpButton;
 
 @end

@@ -15,14 +15,17 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize managedObjectContext = _managedObjectContext;
 
+#pragma mark - Initialize
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [self registerDefaultPreferences];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserSelectedBackground:)
                                                  name:@"userSelectedBackground"
                                                object:nil];
 
+    
+    [self registerDefaultPreferences];
     [self.window setAlphaValue:0.0f];
     
     NSScreen *screen = [NSScreen mainScreen];
@@ -35,12 +38,32 @@
     [self loadImages:workspace screen:screen imageFrame:[self getImageFrame]];
     
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
-    
+
     [self displayUserBackground:workspace screen:screen];
     
     CustomWindow *customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
 }
+
+- (void)configureBrowserView
+{
+    NSScreen *screen = [NSScreen mainScreen];
+    NSRect screenFrame = [screen frame];
+    
+    int maxImageHeight = screenFrame.size.height / 6;
+    
+    NSRect scrollViewFrame;
+    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
+    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
+    
+    [self.wallpaperScrollView setFrame:scrollViewFrame];
+    [self.browserView setFrame:scrollViewFrame];
+    
+    [self.browserView setContentResizingMask:NSViewWidthSizable];
+    [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
+    [self.browserView setCellSize:NSMakeSize(400, maxImageHeight)];
+}
+
 
 -(void)registerDefaultPreferences
 {
@@ -53,6 +76,8 @@
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
 }
+
+#pragma mark - Set Background
 
 -(void)handleUserSelectedBackground:(NSNotification *)notification
 {
@@ -124,6 +149,7 @@
     newImageWidth = imageWidth * zoomRatio;
     hBoundAdjustment = (newImageHeight - imageHeight) / 2;
 
+    [self.imageView setAutoresizes:YES];
     [self.imageView setImageWithURL:url];
     [self.imageView setImageZoomFactor:zoomRatio centerPoint:NSMakePoint(0.0, 0.0)];
     [self.imageView setFrame:NSMakeRect((screenFrame.size.width - newImageWidth)/2, (screenFrame.size.height - newImageHeight)/2, newImageWidth, newImageHeight)];
@@ -131,29 +157,12 @@
 
 - (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen
 {
+    
     NSURL *currentBackgroundUrl = [workspace desktopImageURLForScreen:screen];
     [self displayImageAtURL:currentBackgroundUrl onScreen:screen];
 }
 
-- (void)configureBrowserView
-{
-    NSScreen *screen = [NSScreen mainScreen];
-    NSRect screenFrame = [screen frame];
-    
-    int maxImageHeight = screenFrame.size.height / 6;
-    
-    NSRect scrollViewFrame;
-    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
-    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
-    
-    [self.wallpaperScrollView setFrame:scrollViewFrame];
-    [self.browserView setFrame:scrollViewFrame];
-    
-    [self.browserView setContentResizingMask:NSViewWidthSizable];
-    [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
-    [self.browserView setCellSize:NSMakeSize( 400, maxImageHeight)];
-}
-
+#pragma mark - Change Directory
 
 - (void)loadImages:(NSWorkspace *)workspace screen:(NSScreen *)screen imageFrame:(NSRect)imageFrame
 {
@@ -185,6 +194,16 @@
     
     [self.imageBrowserController updateDatasource:images];
 }
+
+#pragma mark - Misc.
+
+- (IBAction)handlePreferencesSelected:(id)sender
+{
+    self.preferenceWindow = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
+    
+    [self.preferenceWindow showWindow:self];
+}
+
 
 #pragma mark - Stock app code
 

@@ -18,4 +18,3 @@
 @property (weak) IBOutlet IKImageBrowserView *imageBrowser;
 
 @end
-

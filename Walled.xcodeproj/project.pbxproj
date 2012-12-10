@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8320E7F0167658BB00AC9B96 /* Preferences.xib */; };
+		8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
@@ -35,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8320E7F0167658BB00AC9B96 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
+		8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
+		8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
 		83442DEF1665C6EC0019B105 /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
@@ -139,6 +144,9 @@
 				83442DF01665C6EC0019B105 /* CustomWindow.m */,
 				832ECE141667F2F300465951 /* ImageBrowserController.h */,
 				832ECE151667F2F300465951 /* ImageBrowserController.m */,
+				8320E7F0167658BB00AC9B96 /* Preferences.xib */,
+				8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */,
+				8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -248,6 +256,7 @@
 				8380C057165C9B39002D81E7 /* InfoPlist.strings in Resources */,
 				8380C05D165C9B39002D81E7 /* Credits.rtf in Resources */,
 				8380C063165C9B39002D81E7 /* MainMenu.xib in Resources */,
+				8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +296,7 @@
 				8380C066165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld in Sources */,
 				83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */,
 				832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */,
+				8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
