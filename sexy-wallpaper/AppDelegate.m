@@ -81,7 +81,7 @@
 
 -(void)handleUserSelectedBackground:(NSNotification *)notification
 {
-    NSScreen *curScreen = [NSScreen mainScreen];    
+    NSScreen *curScreen = [NSScreen mainScreen];
     NSDictionary *screenOptions = [[NSWorkspace sharedWorkspace] desktopImageOptionsForScreen:curScreen];
 
     NSURL *imageUrl = [[notification userInfo] objectForKey:@"url"];
