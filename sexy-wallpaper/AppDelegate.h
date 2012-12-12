@@ -27,7 +27,7 @@
 @property (weak) IBOutlet IKImageBrowserView *browserView;
 
 @property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
-@property (retain) IBOutlet NSPopUpButton *locationsPopUpButton;
+@property (weak) IBOutlet NSPopUpButton *locationsPopUpButton;
 @property (weak) IBOutlet NSImageView *imageView;
 
 @end

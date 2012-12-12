@@ -82,7 +82,8 @@
 }
 
 - (void)updateDatasource:(NSMutableArray *)images
-{   
+{
+    [self.mImages removeAllObjects];
     NSEnumerator *e = [images objectEnumerator];
     
     NSURL *url;

@@ -32,19 +32,15 @@
     NSRect screenFrame = [screen frame];
     
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
-    
-    NSRect buttonRect;
-    buttonRect.origin = NSMakePoint(100, 100);
-    buttonRect.size = NSMakeSize(100, 100);
-    
-    self.locationsPopUpButton = [[NSPopUpButton alloc] initWithFrame:buttonRect];
-    
-    [self.imageView addSubview:self.browserView];
+
     [self.imageView addSubview:self.locationsPopUpButton];
+    [self.imageView addSubview:self.browserView];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
-    [self loadImages:workspace screen:screen imageFrame:[self getImageFrame]];
+    [self updateLocationsMenu];
+    
+    [self loadImages];
     
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
 
@@ -71,8 +67,37 @@
     [self.browserView setContentResizingMask:NSViewWidthSizable];
     [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
     [self.browserView setCellSize:NSMakeSize(400, maxImageHeight)];
+    
+    NSRect buttonRect;
+    buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
+    buttonRect.size = NSMakeSize(200, 25);
+    [self.locationsPopUpButton setFrame:buttonRect];
 }
 
+-(void)updateLocationsMenu
+{
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSArray *locations = [defaults arrayForKey:@"Locations"];
+
+    
+    int i;
+    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Locations"];
+    
+    for(i = 0; i < [locations count]; i++)
+    {
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected) keyEquivalent:@""];
+        [menu addItem:item];
+    }
+    
+    [self.locationsPopUpButton setMenu:menu];
+}
+
+-(void)locationSelected
+{
+    NSString *newLocation = [[self.locationsPopUpButton selectedItem] title];
+    [[NSUserDefaults standardUserDefaults] setValue:newLocation forKey:@"CurrentLocation"];
+    [self loadImages];
+}
 
 -(void)registerDefaultPreferences
 {
@@ -141,8 +166,8 @@
 
 #pragma mark - Change Directory
 
-- (void)loadImages:(NSWorkspace *)workspace screen:(NSScreen *)screen imageFrame:(NSRect)imageFrame
-{
+- (void)loadImages
+{  
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     
     NSURL *currentLocation = [defaults URLForKey:@"CurrentLocation"];
