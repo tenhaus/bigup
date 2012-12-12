@@ -153,6 +153,7 @@
     [self.imageView setImageWithURL:url];
     [self.imageView setImageZoomFactor:zoomRatio centerPoint:NSMakePoint(0.0, 0.0)];
     [self.imageView setFrame:NSMakeRect((screenFrame.size.width - newImageWidth)/2, (screenFrame.size.height - newImageHeight)/2, newImageWidth, newImageHeight)];
+
 }
 
 - (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen
