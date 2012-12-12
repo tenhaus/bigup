@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "CustomWindow.h"
+#import "WallpaperImageView.h"
 
 @implementation AppDelegate
 
@@ -23,7 +24,6 @@
                                              selector:@selector(handleUserSelectedBackground:)
                                                  name:@"userSelectedBackground"
                                                object:nil];
-
     
     [self registerDefaultPreferences];
     [self.window setAlphaValue:0.0f];
@@ -32,6 +32,15 @@
     NSRect screenFrame = [screen frame];
     
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
+    
+    NSRect buttonRect;
+    buttonRect.origin = NSMakePoint(100, 100);
+    buttonRect.size = NSMakeSize(100, 100);
+    
+    self.locationsPopUpButton = [[NSPopUpButton alloc] initWithFrame:buttonRect];
+    
+    [self.imageView addSubview:self.browserView];
+    [self.imageView addSubview:self.locationsPopUpButton];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
@@ -119,41 +128,8 @@
 
 - (void)displayImageAtURL:(NSURL *)url onScreen:(NSScreen *)screen
 {
-    CGFloat wZoomRatio, hZoomRatio, zoomRatio = 0.0;
-    
-    NSRect screenFrame = [screen frame];
-    
-    NSImage *tmpImage = [[NSImage alloc] initByReferencingURL:url];
-    NSArray *reps = [tmpImage representations];
-
-    CGFloat imageWidth = 0.0;
-    CGFloat imageHeight = 0.0;
-
-    CGFloat newImageWidth = 0.0;
-    CGFloat newImageHeight = 0.0;
-    
-    CGFloat hBoundAdjustment = 0.0;
-    
-    for (NSImageRep * imageRep in reps)
-    {
-        if ([imageRep pixelsWide] > imageWidth) imageWidth = [imageRep pixelsWide];
-        if ([imageRep pixelsHigh] > imageHeight) imageHeight = [imageRep pixelsHigh];
-    }
-    
-    wZoomRatio = screenFrame.size.width / imageWidth;
-    hZoomRatio = screenFrame.size.height / imageHeight;
-    
-    zoomRatio = MAX(wZoomRatio, hZoomRatio);
-    
-    newImageHeight = imageHeight * zoomRatio;
-    newImageWidth = imageWidth * zoomRatio;
-    hBoundAdjustment = (newImageHeight - imageHeight) / 2;
-
-    [self.imageView setAutoresizes:YES];
-    [self.imageView setImageWithURL:url];
-    [self.imageView setImageZoomFactor:zoomRatio centerPoint:NSMakePoint(0.0, 0.0)];
-    [self.imageView setFrame:NSMakeRect((screenFrame.size.width - newImageWidth)/2, (screenFrame.size.height - newImageHeight)/2, newImageWidth, newImageHeight)];
-
+    NSImage *image = [[NSImage alloc] initByReferencingURL:url];
+    [self.imageView setImage:image];
 }
 
 - (void)displayUserBackground:(NSWorkspace *)workspace screen:(NSScreen *)screen

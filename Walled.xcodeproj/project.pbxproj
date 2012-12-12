@@ -22,6 +22,7 @@
 		8380C06F165C9B3A002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
+		83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */; };
 		83FBCA25166724920099E1B4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
 		83FBCA26166724920099E1B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0C1665D26E0019B105 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,8 @@
 		8380C076165C9B3A002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C078165C9B3A002D81E7 /* sexy_wallpaperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sexy_wallpaperTests.h; sourceTree = "<group>"; };
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
+		83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperImageView.h; sourceTree = "<group>"; };
+		83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperImageView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,8 @@
 				8320E7F0167658BB00AC9B96 /* Preferences.xib */,
 				8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */,
 				8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */,
+				83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */,
+				83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -297,6 +302,7 @@
 				83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */,
 				832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */,
 				8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */,
+				83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
