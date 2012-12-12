@@ -90,6 +90,8 @@
     }
     
     [self.locationsPopUpButton setMenu:menu];
+    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
+    
 }
 
 -(void)locationSelected
