@@ -148,7 +148,7 @@
             NSMutableDictionary *dataDict = [[NSMutableDictionary alloc] init];
             [dataDict setObject:url forKey:@"url"];
             
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"userSelectedBackground" object:self userInfo:dataDict];            
+            [[NSNotificationCenter defaultCenter] postNotificationName:@"userSelectedBackground" object:self userInfo:dataDict];
         }
 	}
 }
