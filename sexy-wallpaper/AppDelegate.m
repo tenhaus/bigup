@@ -78,7 +78,6 @@
 {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray *locations = [defaults arrayForKey:@"Locations"];
-
     
     int i;
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Locations"];
@@ -91,7 +90,6 @@
     
     [self.locationsPopUpButton setMenu:menu];
     [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
-    
 }
 
 -(void)locationSelected

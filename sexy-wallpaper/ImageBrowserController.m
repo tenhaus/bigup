@@ -153,11 +153,6 @@
 	}
 }
 
--(void)scrollWheel:(NSEvent *)theEvent
-{
-    [self.imageBrowser scrollWheel:theEvent];
-}
-
 @end
 
 
