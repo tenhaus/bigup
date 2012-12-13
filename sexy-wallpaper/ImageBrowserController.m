@@ -75,7 +75,6 @@
     if (self)
     {
         self.mImages = [[NSMutableArray alloc] init];
-        [self.imageBrowser setAnimates:YES];
     }
     
     return self;
@@ -96,6 +95,8 @@
     [self sortDataAndReload];
 
 }
+
+
 
 -(void) sortDataAndReload
 {

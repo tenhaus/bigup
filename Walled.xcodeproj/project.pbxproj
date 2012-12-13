@@ -25,6 +25,8 @@
 		83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */; };
 		83FBCA25166724920099E1B4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
 		83FBCA26166724920099E1B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0C1665D26E0019B105 /* QuartzCore.framework */; };
+		83FE7B70167A6AD30081DC53 /* CustomIkImageBrowserView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FE7B6F167A6AD30081DC53 /* CustomIkImageBrowserView.m */; };
+		83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,10 @@
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
 		83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperImageView.h; sourceTree = "<group>"; };
 		83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperImageView.m; sourceTree = "<group>"; };
+		83FE7B6E167A6AD30081DC53 /* CustomIkImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIkImageBrowserView.h; sourceTree = "<group>"; };
+		83FE7B6F167A6AD30081DC53 /* CustomIkImageBrowserView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomIkImageBrowserView.m; sourceTree = "<group>"; };
+		83FE7B7A167A6D2E0081DC53 /* CustomImageBrowserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomImageBrowserCell.h; sourceTree = "<group>"; };
+		83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomImageBrowserCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +158,10 @@
 				8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */,
 				83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */,
 				83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */,
+				83FE7B6E167A6AD30081DC53 /* CustomIkImageBrowserView.h */,
+				83FE7B6F167A6AD30081DC53 /* CustomIkImageBrowserView.m */,
+				83FE7B7A167A6D2E0081DC53 /* CustomImageBrowserCell.h */,
+				83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -303,6 +313,8 @@
 				832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */,
 				8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */,
 				83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */,
+				83FE7B70167A6AD30081DC53 /* CustomIkImageBrowserView.m in Sources */,
+				83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

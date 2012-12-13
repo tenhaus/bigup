@@ -41,9 +41,6 @@
     [self updateLocationsMenu];
     
     [self loadImages];
-    
-    [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
-
     [self displayUserBackground:workspace screen:screen];
     
     CustomWindow *customWindow = (CustomWindow *)self.window;
@@ -65,9 +62,16 @@
     [self.browserView setFrame:scrollViewFrame];
     
     [self.browserView setContentResizingMask:NSViewWidthSizable];
-    [self.browserView setCellsStyleMask:IKCellsStyleShadowed];
+    [self.browserView setAnimates:YES];
+
+//    [self.browserView setCellsStyleMask:IKCellsStyleOutlined | IKCellsStyleShadowed];
+
+//    [self.browserView setValue:[NSColor colorWithSRGBRed:1 green:216 blue:216 alpha:216] forKey:IKImageBrowserCellsOutlineColorKey];
+//    [self.browserView setValue:[NSColor clearColor] forKey:IKImageBrowserSelectionColorKey];
+    [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
+
     [self.browserView setCellSize:NSMakeSize(400, maxImageHeight)];
-    
+
     NSRect buttonRect;
     buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
     buttonRect.size = NSMakeSize(200, 25);
