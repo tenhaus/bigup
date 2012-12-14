@@ -12,7 +12,7 @@
 
 - (CALayer *)layerForType:(NSString *)type
 {
-    NSImage *image = self.representedItem;
+
     if(type == IKImageBrowserCellForegroundLayer)
     {
         CALayer *layer = [CALayer layer];

@@ -34,7 +34,7 @@
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 
     [self.imageView addSubview:self.locationsPopUpButton];
-    [self.imageView addSubview:self.browserView];
+    [self.imageView addSubview:self.browserScrollView];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];

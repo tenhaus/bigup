@@ -25,6 +25,7 @@
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 @property (weak) IBOutlet NSArrayController *tableArrayController;
 @property (weak) IBOutlet IKImageBrowserView *browserView;
+@property (weak) IBOutlet NSScrollView *browserScrollView;
 
 @property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
 @property (weak) IBOutlet NSPopUpButton *locationsPopUpButton;
