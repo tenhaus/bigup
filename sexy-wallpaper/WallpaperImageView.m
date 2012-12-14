@@ -58,4 +58,9 @@
     [self.image drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
 }
 
+-(void)scrollWheel:(NSEvent *)theEvent
+{
+    [self.browser scrollWheel:theEvent];
+}
+
 @end

@@ -7,7 +7,10 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "CustomIkImageBrowserView.h"
 
 @interface WallpaperImageView : NSImageView
+
+@property (retain) CustomIkImageBrowserView *browser;
 
 @end

@@ -48,6 +48,7 @@
     
     CustomWindow *customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
+    self.imageView.browser = self.browserView;
 }
 
 - (void)configureBrowserView
@@ -79,6 +80,8 @@
     buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
     buttonRect.size = NSMakeSize(200, 25);
     [self.locationsPopUpButton setFrame:buttonRect];
+    [self.browserScrollView setHasVerticalScroller:NO];
+
 }
 
 -(void)updateLocationsMenu
