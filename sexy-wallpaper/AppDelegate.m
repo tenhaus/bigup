@@ -20,6 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    [NSApp setPresentationOptions:NSApplicationPresentationAutoHideDock | NSApplicationPresentationDisableProcessSwitching | NSApplicationPresentationDisableHideApplication];
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(handleUserSelectedBackground:)
                                                  name:@"userSelectedBackground"
