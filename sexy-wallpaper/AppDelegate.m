@@ -38,6 +38,7 @@
 
     [self.imageView addSubview:self.locationsPopUpButton];
     [self.imageView addSubview:self.browserScrollView];
+
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
@@ -49,6 +50,32 @@
     CustomWindow *customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
     self.imageView.browser = self.browserView;
+}
+
+-(CALayer *)buildGradientLayer
+{
+    NSScreen *screen = [NSScreen mainScreen];
+    NSRect screenFrame = [screen frame];
+    
+    CGColorRef green = CGColorCreateGenericRGB(0.0, 0.0, 0.0, .8);
+	CGColorRef blue = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1);
+	
+    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
+//    /    [gradientLayer setOpaque:YES];
+//    [gradientLayer setOpacity:0.1];
+    
+	//Package the colors in a NSArray and add it to the layer
+	NSArray *colors = [NSArray arrayWithObjects:(__bridge id)green, (__bridge id)blue, nil];
+	gradientLayer.colors = colors;
+	
+	//Release the colors
+	CGColorRelease(green);
+	CGColorRelease(blue);
+    
+    gradientLayer.frame = screenFrame;
+    gradientLayer.masksToBounds = YES;
+    
+    return gradientLayer;
 }
 
 - (void)configureBrowserView

@@ -10,16 +10,6 @@
 
 @implementation WallpaperImageView
 
-- (id)initWithFrame:(NSRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code here.
-    }
-    
-    return self;
-}
-
 - (void)drawRect:(NSRect)dirtyRect
 {
     NSScreen *screen = [NSScreen mainScreen];
@@ -56,6 +46,10 @@
     CGRect imageRect = NSMakeRect((screenFrame.size.width - newImageWidth)/2, (screenFrame.size.height - newImageHeight)/2, newImageWidth, newImageHeight);
 
     [self.image drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+
+    NSRect gradientBounds = NSMakeRect(0, 0, self.bounds.size.width, self.bounds.size.height/2.5);
+    NSGradient* aGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:.6] endingColor:[NSColor clearColor]];
+	[aGradient drawInRect:gradientBounds angle:90.0];
 }
 
 -(void)scrollWheel:(NSEvent *)theEvent
