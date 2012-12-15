@@ -21,10 +21,10 @@
     return self;
 }
 
-- (IKImageBrowserCell *)newCellForRepresentedItem:(id)anItem
-{
-    CustomImageBrowserCell *cell = [[CustomImageBrowserCell alloc]init];
-    return cell;
-}
+//- (IKImageBrowserCell *)newCellForRepresentedItem:(id)anItem
+//{
+//    CustomImageBrowserCell *cell = [[CustomImageBrowserCell alloc]init];
+//    return cell;
+//}
 
 @end
