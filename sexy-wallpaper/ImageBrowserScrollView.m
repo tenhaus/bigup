@@ -29,10 +29,10 @@
 {
     if(theEvent.scrollingDeltaX == 0)
     {
-        NSLog(@"MINE %f", theEvent.scrollingDeltaY/100);
+//        NSLog(@"MINE %f", theEvent.scrollingDeltaY/100);
         
         CGWheelCount wheelCount = 2; // 1 for Y-only, 2 for Y-X, 3 for Y-X-Z
-        int32_t xScroll = theEvent.scrollingDeltaY; // Negative for right
+        int32_t xScroll = theEvent.scrollingDeltaY * -1; // Negative for right
         int32_t yScroll = 0; // Negative for down
         CGEventRef cgEvent = CGEventCreateScrollWheelEvent(NULL, kCGScrollEventUnitPixel, wheelCount,yScroll, xScroll);
 
@@ -47,7 +47,7 @@
     }
     else
     {
-        NSLog(@"REAL %f", theEvent.scrollingDeltaX);
+//        NSLog(@"REAL %f", theEvent.scrollingDeltaX);
         [super scrollWheel:theEvent];
     }
 }
