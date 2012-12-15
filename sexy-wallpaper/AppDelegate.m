@@ -87,7 +87,7 @@
     
     NSRect scrollViewFrame;
     scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
-    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /15);
+    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /10);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
     [self.browserView setFrame:scrollViewFrame];
@@ -101,7 +101,8 @@
     [self.browserView setValue:[NSColor clearColor] forKey:IKImageBrowserSelectionColorKey];
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
 
-    [self.browserView setCellSize:NSMakeSize(400, maxImageHeight)];
+    [self.browserView setIntercellSpacing:NSMakeSize(40.0, 0)];
+    [self.browserView setCellSize:NSMakeSize(350, maxImageHeight)];
 
     NSRect buttonRect;
     buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
