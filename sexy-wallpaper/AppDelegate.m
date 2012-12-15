@@ -20,7 +20,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [NSApp setPresentationOptions:NSApplicationPresentationAutoHideDock | NSApplicationPresentationDisableProcessSwitching | NSApplicationPresentationDisableHideApplication |
+    [NSApp setPresentationOptions:NSApplicationPresentationHideDock | NSApplicationPresentationDisableProcessSwitching | NSApplicationPresentationDisableHideApplication |
      NSApplicationPresentationAutoHideMenuBar];
     
     [[NSNotificationCenter defaultCenter] addObserver:self

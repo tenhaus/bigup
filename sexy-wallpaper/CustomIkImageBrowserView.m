@@ -27,16 +27,4 @@
     return cell;
 }
 
--(void)scrollWheel:(NSEvent *)theEvent
-{
-    if(theEvent.scrollingDeltaX == 0)
-    {
-
-    }
-    else
-    {
-        [super scrollWheel:theEvent];
-    }
-}
-
 @end
