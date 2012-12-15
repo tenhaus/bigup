@@ -48,7 +48,7 @@
     [self.image drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
 
     NSRect gradientBounds = NSMakeRect(0, 0, self.bounds.size.width, self.bounds.size.height/2.5);
-    NSGradient* aGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:.6] endingColor:[NSColor clearColor]];
+    NSGradient* aGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:.5] endingColor:[NSColor clearColor]];
 	[aGradient drawInRect:gradientBounds angle:90.0];
 }
 

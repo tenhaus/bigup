@@ -87,7 +87,7 @@
     
     NSRect scrollViewFrame;
     scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
-    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /6);
+    scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /15);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
     [self.browserView setFrame:scrollViewFrame];
