@@ -12,6 +12,7 @@
 #import "PreferencesWindowController.h"
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
+#import "MenuBarView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

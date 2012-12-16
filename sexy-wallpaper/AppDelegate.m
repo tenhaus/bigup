@@ -38,7 +38,7 @@
 
     [self.imageView addSubview:self.locationsPopUpButton];
     [self.imageView addSubview:self.browserScrollView];
-
+    [self.locationsPopUpButton setAlphaValue:0.0];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
@@ -126,8 +126,10 @@
         [menu addItem:item];
     }
     
-    [self.locationsPopUpButton setMenu:menu];
-    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
+    
+    
+//    [self.locationsPopUpButton setMenu:menu];
+//    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
 }
 
 -(void)locationSelected

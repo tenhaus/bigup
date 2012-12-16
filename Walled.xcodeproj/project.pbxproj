@@ -10,7 +10,11 @@
 		8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8320E7F0167658BB00AC9B96 /* Preferences.xib */; };
 		8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
+		8342786E167D7B21008DCC17 /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8342786D167D7B21008DCC17 /* locations.png */; };
+		83427871167D823E008DCC17 /* checkmark_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 8342786F167D823E008DCC17 /* checkmark_64.png */; };
+		83427874167D82F5008DCC17 /* stop_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 83427873167D82F5008DCC17 /* stop_64.png */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
+		837F14F9167D5F770089EA42 /* MenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F14F8167D5F770089EA42 /* MenuBarView.m */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C057165C9B39002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C055165C9B39002D81E7 /* InfoPlist.strings */; };
 		8380C059165C9B39002D81E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C058165C9B39002D81E7 /* main.m */; };
@@ -46,10 +50,15 @@
 		8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
+		8342786D167D7B21008DCC17 /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
+		8342786F167D823E008DCC17 /* checkmark_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_64.png; sourceTree = "<group>"; };
+		83427873167D82F5008DCC17 /* stop_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_64.png; sourceTree = "<group>"; };
 		83442DEF1665C6EC0019B105 /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442E0A1665D2630019B105 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		83442E0C1665D26E0019B105 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		837F14F7167D5F770089EA42 /* MenuBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarView.h; sourceTree = "<group>"; };
+		837F14F8167D5F770089EA42 /* MenuBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarView.m; sourceTree = "<group>"; };
 		8380C048165C9B39002D81E7 /* Walled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380C04C165C9B39002D81E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8380C04F165C9B39002D81E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +115,8 @@
 		8380C03D165C9B39002D81E7 = {
 			isa = PBXGroup;
 			children = (
+				83427873167D82F5008DCC17 /* stop_64.png */,
+				8342786D167D7B21008DCC17 /* locations.png */,
 				83442E0C1665D26E0019B105 /* QuartzCore.framework */,
 				83442E0A1665D2630019B105 /* Quartz.framework */,
 				8380C052165C9B39002D81E7 /* sexy-wallpaper */,
@@ -147,6 +158,7 @@
 		8380C052165C9B39002D81E7 /* sexy-wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				8342786F167D823E008DCC17 /* checkmark_64.png */,
 				8380C05E165C9B39002D81E7 /* AppDelegate.h */,
 				8380C05F165C9B39002D81E7 /* AppDelegate.m */,
 				8380C061165C9B39002D81E7 /* MainMenu.xib */,
@@ -167,6 +179,8 @@
 				83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */,
 				83D65962167BB13000ACBD58 /* ImageBrowserScrollView.h */,
 				83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */,
+				837F14F7167D5F770089EA42 /* MenuBarView.h */,
+				837F14F8167D5F770089EA42 /* MenuBarView.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -277,6 +291,9 @@
 				8380C05D165C9B39002D81E7 /* Credits.rtf in Resources */,
 				8380C063165C9B39002D81E7 /* MainMenu.xib in Resources */,
 				8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */,
+				8342786E167D7B21008DCC17 /* locations.png in Resources */,
+				83427871167D823E008DCC17 /* checkmark_64.png in Resources */,
+				83427874167D82F5008DCC17 /* stop_64.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +338,7 @@
 				83FE7B70167A6AD30081DC53 /* CustomIkImageBrowserView.m in Sources */,
 				83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */,
 				83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */,
+				837F14F9167D5F770089EA42 /* MenuBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
