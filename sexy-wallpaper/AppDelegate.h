@@ -12,7 +12,6 @@
 #import "PreferencesWindowController.h"
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
-#import "MenuBarView.h"
 #import "DropDownButton.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
@@ -32,7 +31,11 @@
 @property (weak) IBOutlet NSScrollView *browserScrollView;
 
 @property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
-@property (weak) IBOutlet NSPopUpButton *locationsPopUpButton;
+@property (weak) IBOutlet NSView *menuBar;
+
 @property (weak) IBOutlet WallpaperImageView *imageView;
+@property (weak) IBOutlet NSButton *locationsButton;
+@property (retain) NSMenu *locationsMenu;
+@property (weak) IBOutlet NSTextField *locationTitle;
 
 @end

@@ -10,27 +10,28 @@
 
 @implementation CustomImageBrowserCell
 
-//- (CALayer *)layerForType:(NSString *)type
-//{
-//
-//    if(type == IKImageBrowserCellForegroundLayer)
-//    {
+- (CALayer *)layerForType:(NSString *)type
+{
+
+    if(type == IKImageBrowserCellForegroundLayer)
+    {
 //        CALayer *layer = [CALayer layer];
 //        [layer setFrame:self.imageContainerFrame];
 //
 //        [layer setBorderColor:CGColorGetConstantColor(kCGColorWhite)];
 //        [layer setBorderWidth:2.0];
 //        return layer;
-//    }
-//    else if(type == IKImageBrowserCellSelectionLayer)
-//    {
-//        return [CALayer layer];
-//    }
-//    else
-//    {
-//        return [super layerForType:type];
-//    }
-//}
+        return [super layerForType:type];
+    }
+    else if(type == IKImageBrowserCellSelectionLayer)
+    {
+        return [CALayer layer];
+    }
+    else
+    {
+        return [super layerForType:type];
+    }
+}
 
 -(NSImageAlignment)imageAlignment
 {

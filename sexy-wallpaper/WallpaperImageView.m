@@ -47,9 +47,18 @@
 
     [self.image drawInRect:imageRect fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
 
-    NSRect gradientBounds = NSMakeRect(0, 0, self.bounds.size.width, self.bounds.size.height/2.5);
-    NSGradient* aGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:.5] endingColor:[NSColor clearColor]];
-	[aGradient drawInRect:gradientBounds angle:90.0];
+//    NSRect gradientBounds = NSMakeRect(0, 0, self.bounds.size.width, self.bounds.size.height);
+//    NSGradient* gradient = [[NSGradient alloc] initWithStartingColor:[NSColor clearColor] endingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:1]];
+
+//    [gradient drawInRect:gradientBounds relativeCenterPosition:NSMakePoint(0, 0)];
+    
+    NSRect topGradientBounds = NSMakeRect(0, self.bounds.size.height, self.bounds.size.width, (self.bounds.size.height/8)*-1);
+    NSGradient* topGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:0.7] endingColor:[NSColor clearColor]];
+    [topGradient drawInRect:topGradientBounds angle:90];
+//
+//    NSRect bottomGradientBounds = NSMakeRect(0, 0, self.bounds.size.width, self.bounds.size.height/2.5);
+//    NSGradient* bottomGradient = [[NSGradient alloc] initWithStartingColor:[NSColor colorWithSRGBRed:0 green:0 blue:0 alpha:.5] endingColor:[NSColor clearColor]];
+//	[bottomGradient drawInRect:bottomGradientBounds angle:90.0];
 }
 
 -(void)scrollWheel:(NSEvent *)theEvent

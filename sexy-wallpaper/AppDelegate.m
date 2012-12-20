@@ -84,7 +84,7 @@
     int maxImageHeight = screenFrame.size.height / 6;
     
     NSRect scrollViewFrame;
-    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 20);
+    scrollViewFrame.size = CGSizeMake(screenFrame.size.width, maxImageHeight + 100);
     scrollViewFrame.origin = CGPointMake(0, screenFrame.size.height /10);
     
     [self.wallpaperScrollView setFrame:scrollViewFrame];
@@ -115,26 +115,68 @@
     NSArray *locations = [defaults arrayForKey:@"Locations"];
     
     int i;
-    NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Locations"];
+    self.locationsMenu = [[NSMenu alloc] initWithTitle:@"Locations"];
+    [self.locationsMenu setAutoenablesItems:NO];
     
     NSImage *locationsIcon = [NSImage imageNamed:@"locations"];
     
     for(i = 0; i < [locations count]; i++)
     {
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected) keyEquivalent:@""];
+        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected:) keyEquivalent:@""];
         [item setImage:locationsIcon];
-        [menu addItem:item];
+        
+        if(item.title == [defaults stringForKey:@"CurrentLocation"])
+        {
+            [item setState:NSOnState];
+            [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:item.title]];
+        }
+        
+        [self.locationsMenu addItem:item];
     }
-    
-    [self.locationsPopUpButton setMenu:menu];
-    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
 }
 
--(void)locationSelected
+-(NSString *)getTitleForLocation:(NSString *)location
 {
-    NSString *newLocation = [[self.locationsPopUpButton selectedItem] title];
+    return location;
+}
+
+- (IBAction)locationButtonSelected:(id)sender
+{   
+    // 2. Construct fake event.
+    
+    int eventType = NSLeftMouseDown;
+    
+    NSEvent *fakeMouseEvent = [NSEvent mouseEventWithType:eventType
+                                                 location:self.menuBar.frame.origin
+                                            modifierFlags:0
+                                                timestamp:0
+                                             windowNumber:[self.window windowNumber]
+                                                  context:nil
+                                              eventNumber:0
+                                               clickCount:0
+                                                 pressure:0];
+    // 3. Pop up menu
+    [NSMenu popUpContextMenu:self.locationsMenu withEvent:fakeMouseEvent forView:[self.window contentView]];
+}
+
+-(IBAction)locationSelected:(id)sender
+{
+    NSMenuItem *selectedMenuItem = (NSMenuItem *)sender;
+
+    NSString *newLocation = [selectedMenuItem title];
     [[NSUserDefaults standardUserDefaults] setValue:newLocation forKey:@"CurrentLocation"];
     [self loadImages];
+    
+    int i;
+    
+    for(i=0; i<self.locationsMenu.numberOfItems; i++)
+    {
+        NSMenuItem *tmpItem = [self.locationsMenu itemAtIndex:i];
+        [tmpItem setState:NSOffState];
+    }
+    
+    [selectedMenuItem setState:NSOnState];
+    [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:selectedMenuItem.title]];
 }
 
 -(void)registerDefaultPreferences
@@ -147,6 +189,11 @@
                                  dictionaryWithObjectsAndKeys:wallDirectories, @"Locations", url, @"CurrentLocation", nil];
 
     [[NSUserDefaults standardUserDefaults] registerDefaults:appDefaults];
+}
+
+- (IBAction)quitApplication:(id)sender
+{
+    [[NSApplication sharedApplication] terminate:nil];
 }
 
 #pragma mark - Set Background

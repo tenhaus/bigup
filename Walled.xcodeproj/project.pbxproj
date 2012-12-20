@@ -15,7 +15,6 @@
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
 		83427874167D82F5008DCC17 /* stop_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 83427873167D82F5008DCC17 /* stop_64.png */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
-		837F14F9167D5F770089EA42 /* MenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F14F8167D5F770089EA42 /* MenuBarView.m */; };
 		8380C04D165C9B39002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C057165C9B39002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C055165C9B39002D81E7 /* InfoPlist.strings */; };
 		8380C059165C9B39002D81E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C058165C9B39002D81E7 /* main.m */; };
@@ -59,8 +58,6 @@
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442E0A1665D2630019B105 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		83442E0C1665D26E0019B105 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		837F14F7167D5F770089EA42 /* MenuBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarView.h; sourceTree = "<group>"; };
-		837F14F8167D5F770089EA42 /* MenuBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarView.m; sourceTree = "<group>"; };
 		8380C048165C9B39002D81E7 /* Walled.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Walled.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380C04C165C9B39002D81E7 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		8380C04F165C9B39002D81E7 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -182,8 +179,6 @@
 				83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */,
 				83D65962167BB13000ACBD58 /* ImageBrowserScrollView.h */,
 				83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */,
-				837F14F7167D5F770089EA42 /* MenuBarView.h */,
-				837F14F8167D5F770089EA42 /* MenuBarView.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -341,7 +336,6 @@
 				83FE7B70167A6AD30081DC53 /* CustomIkImageBrowserView.m in Sources */,
 				83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */,
 				83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */,
-				837F14F9167D5F770089EA42 /* MenuBarView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
