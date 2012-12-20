@@ -37,6 +37,7 @@
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 
     [self.imageView addSubview:self.browserScrollView];
+    [self.imageView addSubview:self.menuBar];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
