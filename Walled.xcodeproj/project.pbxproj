@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8320E7F0167658BB00AC9B96 /* Preferences.xib */; };
 		8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */; };
+		8324F0B116838097002F9A3E /* DropDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8324F0B016838097002F9A3E /* DropDownButton.m */; };
+		8324F0B6168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
+		8324F0B7168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
-		8342786E167D7B21008DCC17 /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8342786D167D7B21008DCC17 /* locations.png */; };
-		83427871167D823E008DCC17 /* checkmark_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 8342786F167D823E008DCC17 /* checkmark_64.png */; };
 		83427874167D82F5008DCC17 /* stop_64.png in Resources */ = {isa = PBXBuildFile; fileRef = 83427873167D82F5008DCC17 /* stop_64.png */; };
 		83442DF11665C6EC0019B105 /* CustomWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 83442DF01665C6EC0019B105 /* CustomWindow.m */; };
 		837F14F9167D5F770089EA42 /* MenuBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 837F14F8167D5F770089EA42 /* MenuBarView.m */; };
@@ -48,11 +49,12 @@
 		8320E7F0167658BB00AC9B96 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
+		8324F0AF16838097002F9A3E /* DropDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownButton.h; sourceTree = "<group>"; };
+		8324F0B016838097002F9A3E /* DropDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownButton.m; sourceTree = "<group>"; };
+		8324F0B5168389F1002F9A3E /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
-		8342786D167D7B21008DCC17 /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
-		8342786F167D823E008DCC17 /* checkmark_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_64.png; sourceTree = "<group>"; };
-		83427873167D82F5008DCC17 /* stop_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stop_64.png; sourceTree = "<group>"; };
+		83427873167D82F5008DCC17 /* stop_64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = stop_64.png; path = ../stop_64.png; sourceTree = "<group>"; };
 		83442DEF1665C6EC0019B105 /* CustomWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomWindow.h; sourceTree = "<group>"; };
 		83442DF01665C6EC0019B105 /* CustomWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomWindow.m; sourceTree = "<group>"; };
 		83442E0A1665D2630019B105 /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
@@ -115,8 +117,6 @@
 		8380C03D165C9B39002D81E7 = {
 			isa = PBXGroup;
 			children = (
-				83427873167D82F5008DCC17 /* stop_64.png */,
-				8342786D167D7B21008DCC17 /* locations.png */,
 				83442E0C1665D26E0019B105 /* QuartzCore.framework */,
 				83442E0A1665D2630019B105 /* Quartz.framework */,
 				8380C052165C9B39002D81E7 /* sexy-wallpaper */,
@@ -158,7 +158,8 @@
 		8380C052165C9B39002D81E7 /* sexy-wallpaper */ = {
 			isa = PBXGroup;
 			children = (
-				8342786F167D823E008DCC17 /* checkmark_64.png */,
+				8324F0B5168389F1002F9A3E /* locations.png */,
+				83427873167D82F5008DCC17 /* stop_64.png */,
 				8380C05E165C9B39002D81E7 /* AppDelegate.h */,
 				8380C05F165C9B39002D81E7 /* AppDelegate.m */,
 				8380C061165C9B39002D81E7 /* MainMenu.xib */,
@@ -169,6 +170,8 @@
 				832ECE141667F2F300465951 /* ImageBrowserController.h */,
 				832ECE151667F2F300465951 /* ImageBrowserController.m */,
 				8320E7F0167658BB00AC9B96 /* Preferences.xib */,
+				8324F0AF16838097002F9A3E /* DropDownButton.h */,
+				8324F0B016838097002F9A3E /* DropDownButton.m */,
 				8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */,
 				8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */,
 				83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */,
@@ -291,9 +294,8 @@
 				8380C05D165C9B39002D81E7 /* Credits.rtf in Resources */,
 				8380C063165C9B39002D81E7 /* MainMenu.xib in Resources */,
 				8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */,
-				8342786E167D7B21008DCC17 /* locations.png in Resources */,
-				83427871167D823E008DCC17 /* checkmark_64.png in Resources */,
 				83427874167D82F5008DCC17 /* stop_64.png in Resources */,
+				8324F0B6168389F1002F9A3E /* locations.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +304,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */,
+				8324F0B7168389F1002F9A3E /* locations.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */,
+				8324F0B116838097002F9A3E /* DropDownButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
 #import "MenuBarView.h"
+#import "DropDownButton.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

@@ -36,9 +36,7 @@
     
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 
-    [self.imageView addSubview:self.locationsPopUpButton];
     [self.imageView addSubview:self.browserScrollView];
-    [self.locationsPopUpButton setAlphaValue:0.0];
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
@@ -107,9 +105,8 @@
     NSRect buttonRect;
     buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
     buttonRect.size = NSMakeSize(200, 25);
-    [self.locationsPopUpButton setFrame:buttonRect];
-    [self.browserScrollView setHasVerticalScroller:NO];
 
+    [self.browserScrollView setHasVerticalScroller:NO];
 }
 
 -(void)updateLocationsMenu
@@ -120,16 +117,17 @@
     int i;
     NSMenu *menu = [[NSMenu alloc] initWithTitle:@"Locations"];
     
+    NSImage *locationsIcon = [NSImage imageNamed:@"locations"];
+    
     for(i = 0; i < [locations count]; i++)
     {
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected) keyEquivalent:@""];
+        [item setImage:locationsIcon];
         [menu addItem:item];
     }
     
-    
-    
-//    [self.locationsPopUpButton setMenu:menu];
-//    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
+    [self.locationsPopUpButton setMenu:menu];
+    [self.locationsPopUpButton selectItemWithTitle:[defaults stringForKey:@"CurrentLocation"]];
 }
 
 -(void)locationSelected
