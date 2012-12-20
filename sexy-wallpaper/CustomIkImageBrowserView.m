@@ -28,4 +28,19 @@
     return cell;
 }
 
+-(BOOL)acceptsFirstResponder
+{
+    return YES;
+}
+
+-(BOOL)becomeFirstResponder
+{
+    return YES;
+}
+
+-(void)keyDown:(NSEvent *)theEvent
+{
+    NSLog(@"keydown");
+}
+
 @end

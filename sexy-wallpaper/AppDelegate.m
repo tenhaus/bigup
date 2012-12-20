@@ -46,35 +46,10 @@
     [self loadImages];
     [self displayUserBackground:workspace screen:screen];
     
+    self.imageView.browser = self.browserView;
+    
     CustomWindow *customWindow = (CustomWindow *)self.window;
     [customWindow fadeInAndMakeKeyAndOrderFront:YES];
-    self.imageView.browser = self.browserView;
-}
-
--(CALayer *)buildGradientLayer
-{
-    NSScreen *screen = [NSScreen mainScreen];
-    NSRect screenFrame = [screen frame];
-    
-    CGColorRef green = CGColorCreateGenericRGB(0.0, 0.0, 0.0, .8);
-	CGColorRef blue = CGColorCreateGenericRGB(1.0, 1.0, 1.0, 1);
-	
-    CAGradientLayer *gradientLayer = [CAGradientLayer layer];
-//    /    [gradientLayer setOpaque:YES];
-//    [gradientLayer setOpacity:0.1];
-    
-	//Package the colors in a NSArray and add it to the layer
-	NSArray *colors = [NSArray arrayWithObjects:(__bridge id)green, (__bridge id)blue, nil];
-	gradientLayer.colors = colors;
-	
-	//Release the colors
-	CGColorRelease(green);
-	CGColorRelease(blue);
-    
-    gradientLayer.frame = screenFrame;
-    gradientLayer.masksToBounds = YES;
-    
-    return gradientLayer;
 }
 
 - (void)configureBrowserView
@@ -101,7 +76,7 @@
     [self.browserView setValue:[NSColor colorWithDeviceRed:0.0 green:0.0 blue:0.0 alpha:0.0] forKey:IKImageBrowserBackgroundColorKey];
 
     [self.browserView setIntercellSpacing:NSMakeSize(40.0, 0)];
-    [self.browserView setCellSize:NSMakeSize(350, maxImageHeight)];
+    [self.browserView setCellSize:NSMakeSize(16*24, 9*24)];
 
     NSRect buttonRect;
     buttonRect.origin = NSMakePoint(scrollViewFrame.origin.x + 20, scrollViewFrame.origin.y + maxImageHeight + 30);
@@ -125,7 +100,7 @@
     {
         NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected:) keyEquivalent:@""];
         [item setImage:locationsIcon];
-        
+
         if(item.title == [defaults stringForKey:@"CurrentLocation"])
         {
             [item setState:NSOnState];
@@ -221,19 +196,8 @@
     }
 }
 
-
-- (NSRect)getImageFrame
-{
-    NSRect rect;
-    
-    rect.origin = CGPointMake(0.0, 0.0);
-    rect.size = CGSizeMake(300.0, 275.00);
-    
-    return rect;
-}
-
 - (void)goFullScreen:(NSRect)screenFrame
-{   
+{
     [self.window setFrame:screenFrame display:YES];
 }
 
