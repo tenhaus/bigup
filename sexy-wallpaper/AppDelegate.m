@@ -36,6 +36,9 @@
     
     NSWorkspace *workspace = [NSWorkspace sharedWorkspace];
 
+    [self.shadowView setFrame:screenFrame];
+    
+    [self.imageView addSubview:self.shadowView];
     [self.imageView addSubview:self.browserScrollView];
     [self.imageView addSubview:self.menuBar];
     

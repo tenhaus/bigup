@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8320E7F0167658BB00AC9B96 /* Preferences.xib */; };
 		8320E7F416765D6C00AC9B96 /* PreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */; };
-		8324F0B116838097002F9A3E /* DropDownButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8324F0B016838097002F9A3E /* DropDownButton.m */; };
 		8324F0B6168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		8324F0B7168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
@@ -27,6 +26,7 @@
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
 		83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */; };
+		83AB18701684342A001C1BED /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB186F1684342A001C1BED /* ShadowView.m */; };
 		83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */; };
 		83FBCA25166724920099E1B4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
 		83FBCA26166724920099E1B4 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0C1665D26E0019B105 /* QuartzCore.framework */; };
@@ -48,8 +48,6 @@
 		8320E7F0167658BB00AC9B96 /* Preferences.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Preferences.xib; sourceTree = "<group>"; };
 		8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreferencesWindowController.h; sourceTree = "<group>"; };
 		8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreferencesWindowController.m; sourceTree = "<group>"; };
-		8324F0AF16838097002F9A3E /* DropDownButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropDownButton.h; sourceTree = "<group>"; };
-		8324F0B016838097002F9A3E /* DropDownButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropDownButton.m; sourceTree = "<group>"; };
 		8324F0B5168389F1002F9A3E /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
@@ -80,6 +78,8 @@
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
 		83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperImageView.h; sourceTree = "<group>"; };
 		83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperImageView.m; sourceTree = "<group>"; };
+		83AB186E1684342A001C1BED /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
+		83AB186F1684342A001C1BED /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
 		83D65962167BB13000ACBD58 /* ImageBrowserScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserScrollView.h; sourceTree = "<group>"; };
 		83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserScrollView.m; sourceTree = "<group>"; };
 		83FE7B6E167A6AD30081DC53 /* CustomIkImageBrowserView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomIkImageBrowserView.h; sourceTree = "<group>"; };
@@ -167,8 +167,6 @@
 				832ECE141667F2F300465951 /* ImageBrowserController.h */,
 				832ECE151667F2F300465951 /* ImageBrowserController.m */,
 				8320E7F0167658BB00AC9B96 /* Preferences.xib */,
-				8324F0AF16838097002F9A3E /* DropDownButton.h */,
-				8324F0B016838097002F9A3E /* DropDownButton.m */,
 				8320E7F216765D6C00AC9B96 /* PreferencesWindowController.h */,
 				8320E7F316765D6C00AC9B96 /* PreferencesWindowController.m */,
 				83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */,
@@ -179,6 +177,8 @@
 				83FE7B7B167A6D2E0081DC53 /* CustomImageBrowserCell.m */,
 				83D65962167BB13000ACBD58 /* ImageBrowserScrollView.h */,
 				83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */,
+				83AB186E1684342A001C1BED /* ShadowView.h */,
+				83AB186F1684342A001C1BED /* ShadowView.m */,
 			);
 			path = "sexy-wallpaper";
 			sourceTree = "<group>";
@@ -336,6 +336,7 @@
 				83FE7B70167A6AD30081DC53 /* CustomIkImageBrowserView.m in Sources */,
 				83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */,
 				83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */,
+				83AB18701684342A001C1BED /* ShadowView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,7 +345,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */,
-				8324F0B116838097002F9A3E /* DropDownButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

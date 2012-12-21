@@ -12,7 +12,7 @@
 #import "PreferencesWindowController.h"
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
-#import "DropDownButton.h"
+#import "ShadowView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -37,5 +37,6 @@
 @property (weak) IBOutlet NSButton *locationsButton;
 @property (retain) NSMenu *locationsMenu;
 @property (weak) IBOutlet NSTextField *locationTitle;
+@property (weak) IBOutlet ShadowView *shadowView;
 
 @end
