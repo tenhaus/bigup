@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
 #import "ImageBrowserController.h"
-#import "PreferencesWindowController.h"
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
 #import "ShadowView.h"

@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.h"
-         timestampString = "377763062.591195"
+         timestampString = "378923229.459331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "29"
-         endingLineNumber = "29"
+         startingLineNumber = "28"
+         endingLineNumber = "28"
          landmarkName = "tableArrayController"
          landmarkType = "19">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.h"
-         timestampString = "377763062.591195"
+         timestampString = "378923229.459331"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "43"
-         endingLineNumber = "43">
+         startingLineNumber = "42"
+         endingLineNumber = "42">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

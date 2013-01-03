@@ -184,8 +184,8 @@
     {
         NSURL *selectedURL = [openPanel URL];
         [locations addObject:[selectedURL path]];
-        [[NSUserDefaults standardUserDefaults] setValue:[selectedURL path] forKey:@"CurrentLocation"];
         
+        [[NSUserDefaults standardUserDefaults] setValue:[selectedURL path] forKey:@"CurrentLocation"];
         [[NSUserDefaults standardUserDefaults] setValue:locations forKey:@"Locations"];
         
         [self updateLocationsMenu];
@@ -284,16 +284,6 @@
     
     [self.imageBrowserController updateDatasource:images];
 }
-
-#pragma mark - Misc.
-
-- (IBAction)handlePreferencesSelected:(id)sender
-{
-    self.preferenceWindow = [[PreferencesWindowController alloc] initWithWindowNibName:@"Preferences"];
-    
-    [self.preferenceWindow showWindow:self];
-}
-
 
 #pragma mark - Stock app code
 
