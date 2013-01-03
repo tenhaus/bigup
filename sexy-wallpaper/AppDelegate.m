@@ -97,6 +97,13 @@
     self.locationsMenu = [[NSMenu alloc] initWithTitle:@"Locations"];
     [self.locationsMenu setAutoenablesItems:NO];
     
+    
+    NSMenuItem *addDirectoryItem = [[NSMenuItem alloc] initWithTitle:@"Add New Location" action:@selector(locationSelected:) keyEquivalent:@""];
+    [addDirectoryItem setTag:666];
+    
+    [self.locationsMenu addItem:addDirectoryItem];
+    [self.locationsMenu addItem:[NSMenuItem separatorItem]];
+    
     NSImage *locationsIcon = [NSImage imageNamed:@"locations"];
     
     for(i = 0; i < [locations count]; i++)
@@ -141,21 +148,49 @@
 -(IBAction)locationSelected:(id)sender
 {
     NSMenuItem *selectedMenuItem = (NSMenuItem *)sender;
-
-    NSString *newLocation = [selectedMenuItem title];
-    [[NSUserDefaults standardUserDefaults] setValue:newLocation forKey:@"CurrentLocation"];
-    [self loadImages];
     
-    int i;
-    
-    for(i=0; i<self.locationsMenu.numberOfItems; i++)
+    if(selectedMenuItem.tag == 666)
     {
-        NSMenuItem *tmpItem = [self.locationsMenu itemAtIndex:i];
-        [tmpItem setState:NSOffState];
+        [self addLocationClicked];
     }
+    else
+    {
+        NSString *newLocation = [selectedMenuItem title];
+        [[NSUserDefaults standardUserDefaults] setValue:newLocation forKey:@"CurrentLocation"];
+        [self loadImages];
+        
+        int i;
+        
+        for(i=0; i<self.locationsMenu.numberOfItems; i++)
+        {
+            NSMenuItem *tmpItem = [self.locationsMenu itemAtIndex:i];
+            [tmpItem setState:NSOffState];
+        }
+        
+        [selectedMenuItem setState:NSOnState];
+        [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:selectedMenuItem.title]];
+    }
+}
+
+- (void)addLocationClicked
+{   
+    NSMutableArray *locations = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:@"Locations"]];
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
     
-    [selectedMenuItem setState:NSOnState];
-    [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:selectedMenuItem.title]];
+    [openPanel setCanChooseFiles:NO];
+    [openPanel setCanChooseDirectories:YES];
+
+    if ( [openPanel runModal] == NSOKButton )
+    {
+        NSURL *selectedURL = [openPanel URL];
+        [locations addObject:[selectedURL path]];
+        [[NSUserDefaults standardUserDefaults] setValue:[selectedURL path] forKey:@"CurrentLocation"];
+        
+        [[NSUserDefaults standardUserDefaults] setValue:locations forKey:@"Locations"];
+        
+        [self updateLocationsMenu];
+        [self loadImages];
+    }
 }
 
 -(void)registerDefaultPreferences

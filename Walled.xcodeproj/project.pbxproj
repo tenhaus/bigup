@@ -26,6 +26,7 @@
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
 		83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */; };
+		83A3221D168554C10032B56B /* help_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A3221C168554C10032B56B /* help_48.png */; };
 		83AB18701684342A001C1BED /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB186F1684342A001C1BED /* ShadowView.m */; };
 		83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D65963167BB13000ACBD58 /* ImageBrowserScrollView.m */; };
 		83FBCA25166724920099E1B4 /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83442E0A1665D2630019B105 /* Quartz.framework */; };
@@ -78,6 +79,7 @@
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
 		83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperImageView.h; sourceTree = "<group>"; };
 		83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperImageView.m; sourceTree = "<group>"; };
+		83A3221C168554C10032B56B /* help_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_48.png; sourceTree = "<group>"; };
 		83AB186E1684342A001C1BED /* ShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShadowView.h; sourceTree = "<group>"; };
 		83AB186F1684342A001C1BED /* ShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShadowView.m; sourceTree = "<group>"; };
 		83D65962167BB13000ACBD58 /* ImageBrowserScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserScrollView.h; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 		8380C052165C9B39002D81E7 /* sexy-wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				83A3221C168554C10032B56B /* help_48.png */,
 				8324F0B5168389F1002F9A3E /* locations.png */,
 				83427873167D82F5008DCC17 /* stop_64.png */,
 				8380C05E165C9B39002D81E7 /* AppDelegate.h */,
@@ -291,6 +294,7 @@
 				8320E7F1167658BB00AC9B96 /* Preferences.xib in Resources */,
 				83427874167D82F5008DCC17 /* stop_64.png in Resources */,
 				8324F0B6168389F1002F9A3E /* locations.png in Resources */,
+				83A3221D168554C10032B56B /* help_48.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
