@@ -48,6 +48,9 @@
 
 -(void)mouseDown:(NSEvent *)theEvent
 {
+//    [[self.enclosingMenuItem target] performSelector:[self.enclosingMenuItem action]];
+//    [self performSelector:[self.enclosingMenuItem action]];
+//    [self.enclosingMenuItem action];
 }
 
 -(void)drawRect:(NSRect)rect
