@@ -12,6 +12,8 @@
 #import "WallpaperImageView.h"
 #import "CustomIkImageBrowserView.h"
 #import "ShadowView.h"
+#import "MenuItemViewController.h"
+#import "LocationMenuItemView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 

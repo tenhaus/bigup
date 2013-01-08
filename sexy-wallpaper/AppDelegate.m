@@ -89,7 +89,7 @@
 }
 
 -(void)updateLocationsMenu
-{
+{    
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSArray *locations = [defaults arrayForKey:@"Locations"];
     
@@ -108,7 +108,7 @@
     
     for(i = 0; i < [locations count]; i++)
     {
-        NSMenuItem *item = [[NSMenuItem alloc] initWithTitle:[locations objectAtIndex:i] action:@selector(locationSelected:) keyEquivalent:@""];
+        NSMenuItem *item = [self createMenuItemForLocation:[locations objectAtIndex:i]];
         [item setImage:locationsIcon];
 
         if(item.title == [defaults stringForKey:@"CurrentLocation"])
@@ -120,6 +120,20 @@
         [self.locationsMenu addItem:item];
     }
 }
+
+-(NSMenuItem *)createMenuItemForLocation:(NSString *)location
+{
+    MenuItemViewController *controller = [[MenuItemViewController alloc] initWithNibName:@"MenuItemViewController" bundle:nil];
+
+    LocationMenuItemView *view = (LocationMenuItemView *)[controller view];
+    [view setLocation:location];
+
+    NSMenuItem *tmp = [[NSMenuItem alloc] initWithTitle:location action:@selector(locationSelected:) keyEquivalent:@""];
+    
+    [tmp setView:view];
+    return tmp;
+}
+
 
 -(NSString *)getTitleForLocation:(NSString *)location
 {

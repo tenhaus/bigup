@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		830326FD169CC6C600069FA8 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830326FB169CC6C600069FA8 /* MenuItemViewController.m */; };
+		830326FE169CC6C600069FA8 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830326FC169CC6C600069FA8 /* MenuItemViewController.xib */; };
+		83032701169CC95200069FA8 /* LocationMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83032700169CC95200069FA8 /* LocationMenuItemView.m */; };
 		8324F0B6168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		8324F0B7168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
@@ -44,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		830326FA169CC6C600069FA8 /* MenuItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuItemViewController.h; path = ../MenuItemViewController.h; sourceTree = "<group>"; };
+		830326FB169CC6C600069FA8 /* MenuItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuItemViewController.m; path = ../MenuItemViewController.m; sourceTree = "<group>"; };
+		830326FC169CC6C600069FA8 /* MenuItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuItemViewController.xib; path = ../MenuItemViewController.xib; sourceTree = "<group>"; };
+		830326FF169CC95200069FA8 /* LocationMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMenuItemView.h; sourceTree = "<group>"; };
+		83032700169CC95200069FA8 /* LocationMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMenuItemView.m; sourceTree = "<group>"; };
 		8324F0B5168389F1002F9A3E /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
@@ -152,6 +160,11 @@
 		8380C052165C9B39002D81E7 /* sexy-wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				830326FF169CC95200069FA8 /* LocationMenuItemView.h */,
+				83032700169CC95200069FA8 /* LocationMenuItemView.m */,
+				830326FA169CC6C600069FA8 /* MenuItemViewController.h */,
+				830326FB169CC6C600069FA8 /* MenuItemViewController.m */,
+				830326FC169CC6C600069FA8 /* MenuItemViewController.xib */,
 				83A3221C168554C10032B56B /* help_48.png */,
 				8324F0B5168389F1002F9A3E /* locations.png */,
 				83427873167D82F5008DCC17 /* stop_64.png */,
@@ -286,6 +299,7 @@
 				83427874167D82F5008DCC17 /* stop_64.png in Resources */,
 				8324F0B6168389F1002F9A3E /* locations.png in Resources */,
 				83A3221D168554C10032B56B /* help_48.png in Resources */,
+				830326FE169CC6C600069FA8 /* MenuItemViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +345,8 @@
 				83FE7B7C167A6D2E0081DC53 /* CustomImageBrowserCell.m in Sources */,
 				83D65964167BB13000ACBD58 /* ImageBrowserScrollView.m in Sources */,
 				83AB18701684342A001C1BED /* ShadowView.m in Sources */,
+				830326FD169CC6C600069FA8 /* MenuItemViewController.m in Sources */,
+				83032701169CC95200069FA8 /* LocationMenuItemView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
