@@ -10,6 +10,8 @@
 
 @interface LocationMenuItemView : NSView
 
+@property NSString *title;
+
 -(void)setLocation:(NSString *)location;
 
 @property (retain) NSCursor *cursor;

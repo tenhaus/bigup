@@ -96,7 +96,6 @@
 						<string key="NSFrame">{{20, 6}, {34, 34}}</string>
 						<reference key="NSSuperview" ref="567075829"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSImageCell" key="NSCell" id="60413069">
@@ -121,7 +120,6 @@
 						<string key="NSFrame">{{423, 15}, {16, 16}}</string>
 						<reference key="NSSuperview" ref="567075829"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="833445374">
@@ -131,7 +129,7 @@
 							<reference key="NSSupport" ref="688636804"/>
 							<string key="NSCellIdentifier">_NS:9</string>
 							<reference key="NSControlView" ref="149113221"/>
-							<int key="NSButtonFlags">-2042347520</int>
+							<int key="NSButtonFlags">138690560</int>
 							<int key="NSButtonFlags2">130</int>
 							<object class="NSCustomResource" key="NSNormalImage">
 								<string key="NSClassName">NSImage</string>
@@ -154,10 +152,9 @@
 				<string key="NSClassName">LocationMenuItemView</string>
 			</object>
 			<object class="NSTextField" id="683548760">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">268</int>
 				<string key="NSFrameSize">{38, 17}</string>
-				<reference key="NSSuperview"/>
 				<string key="NSReuseIdentifierKey">_NS:1535</string>
 				<bool key="NSEnabled">YES</bool>
 				<object class="NSTextFieldCell" key="NSCell" id="126213497">

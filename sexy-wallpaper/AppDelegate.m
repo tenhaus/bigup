@@ -129,6 +129,7 @@
     [view setLocation:location];
 
     NSMenuItem *tmp = [[NSMenuItem alloc] initWithTitle:location action:@selector(locationSelected:) keyEquivalent:@""];
+    [tmp setTarget:self];
     
     [tmp setView:view];
     return tmp;
@@ -181,9 +182,10 @@
             [tmpItem setState:NSOffState];
         }
         
-        [selectedMenuItem setState:NSOnState];
         [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:selectedMenuItem.title]];
     }
+    
+    [self.locationsMenu cancelTracking];
 }
 
 - (void)addLocationClicked

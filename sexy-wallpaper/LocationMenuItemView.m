@@ -25,8 +25,8 @@
 
 -(void)setLocation:(NSString *)location
 {
+    self.title = location;
     [self.locationLabel setTitleWithMnemonic:location];
-    NSLog(@"%f", self.locationLabel.bounds.size.width);
 }
 
 - (void)viewDidMoveToWindow
@@ -47,10 +47,9 @@
 }
 
 -(void)mouseDown:(NSEvent *)theEvent
-{
-//    [[self.enclosingMenuItem target] performSelector:[self.enclosingMenuItem action]];
-//    [self performSelector:[self.enclosingMenuItem action]];
-//    [self.enclosingMenuItem action];
+{   
+    NSMenuItem *mi = [self enclosingMenuItem];
+    [[mi target] performSelector:[mi action] withObject:self];
 }
 
 -(void)drawRect:(NSRect)rect
