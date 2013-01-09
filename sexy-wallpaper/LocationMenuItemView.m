@@ -65,8 +65,12 @@
         [self.locationLabel setTextColor:[NSColor textColor]];
         [super drawRect:rect];
     }
-    
+}
 
+- (IBAction)deleteButtonSelected:(id)sender
+{
+    NSMenuItem *mi = [self enclosingMenuItem];
+    [[mi target] performSelector:self.deleteAction withObject:self];
 }
 
 @end

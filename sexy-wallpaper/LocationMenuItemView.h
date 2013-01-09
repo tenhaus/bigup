@@ -14,10 +14,12 @@
 
 -(void)setLocation:(NSString *)location;
 
+@property (nonatomic, assign) SEL deleteAction;
 @property (retain) NSCursor *cursor;
 
 @property (weak) IBOutlet NSButton *deleteButton;
 @property (weak) IBOutlet NSTextField *locationLabel;
 
+- (IBAction)deleteButtonSelected:(id)sender;
 
 @end

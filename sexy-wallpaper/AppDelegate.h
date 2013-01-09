@@ -25,6 +25,7 @@
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 
 - (IBAction)saveAction:(id)sender;
+- (IBAction)deleteLocationSelected:(id)sender;
 
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 @property (weak) IBOutlet NSArrayController *tableArrayController;

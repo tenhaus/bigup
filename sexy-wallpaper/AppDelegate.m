@@ -111,7 +111,9 @@
         NSMenuItem *item = [self createMenuItemForLocation:[locations objectAtIndex:i]];
         [item setImage:locationsIcon];
 
-        if(item.title == [defaults stringForKey:@"CurrentLocation"])
+        NSString *currentLocation = [defaults stringForKey:@"CurrentLocation"];
+
+        if([currentLocation isEqualToString:item.title])
         {
             [item setState:NSOnState];
             [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:item.title]];
@@ -127,11 +129,12 @@
 
     LocationMenuItemView *view = (LocationMenuItemView *)[controller view];
     [view setLocation:location];
-
+    [view setDeleteAction:@selector(deleteLocationSelected:)];
+    
     NSMenuItem *tmp = [[NSMenuItem alloc] initWithTitle:location action:@selector(locationSelected:) keyEquivalent:@""];
     [tmp setTarget:self];
-    
     [tmp setView:view];
+    
     return tmp;
 }
 
@@ -170,23 +173,65 @@
     }
     else
     {
-        NSString *newLocation = [selectedMenuItem title];
-        [[NSUserDefaults standardUserDefaults] setValue:newLocation forKey:@"CurrentLocation"];
-        [self loadImages];
-        
-        int i;
-        
-        for(i=0; i<self.locationsMenu.numberOfItems; i++)
-        {
-            NSMenuItem *tmpItem = [self.locationsMenu itemAtIndex:i];
-            [tmpItem setState:NSOffState];
-        }
-        
-        [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:selectedMenuItem.title]];
+        [self setLocation:[selectedMenuItem title]];
     }
     
     [self.locationsMenu cancelTracking];
 }
+
+-(void)setLocation:(NSString *)location
+{
+    [[NSUserDefaults standardUserDefaults] setValue:location forKey:@"CurrentLocation"];
+    [self loadImages];
+    
+    int i;
+    
+    for(i=0; i<self.locationsMenu.numberOfItems; i++)
+    {
+        NSMenuItem *tmpItem = [self.locationsMenu itemAtIndex:i];
+        [tmpItem setState:NSOffState];
+    }
+    
+    [self.locationTitle setTitleWithMnemonic:[self getTitleForLocation:location]];
+}
+
+-(IBAction)deleteLocationSelected:(id)sender
+{
+    LocationMenuItemView *view = (LocationMenuItemView *)sender;
+    [self deleteLocation:view.title];
+}
+
+-(void)deleteLocation:(NSString *)location
+{
+    [self.locationsMenu cancelTracking];
+    
+    int i;
+    
+    NSMutableArray *locations = [[NSMutableArray alloc] initWithArray:[[NSUserDefaults standardUserDefaults] arrayForKey:@"Locations"]];
+    
+ 
+    for(i = 0; i < [locations count]; i++)
+    {
+        NSString *url = [locations objectAtIndex:i];
+        
+        if([url isEqualToString:location])
+        {
+            [locations removeObjectAtIndex:i];
+        }
+    }
+
+    [[NSUserDefaults standardUserDefaults] setValue:locations forKey:@"Locations"];
+
+    [self updateLocationsMenu];
+    
+    NSString *currentLocation = [[NSUserDefaults standardUserDefaults] stringForKey:@"CurrentLocation"];
+    
+    if([location isEqualToString:currentLocation])
+    {
+        [self setLocation:[locations objectAtIndex:0]];
+    }
+}
+
 
 - (void)addLocationClicked
 {   
@@ -196,16 +241,15 @@
     [openPanel setCanChooseFiles:NO];
     [openPanel setCanChooseDirectories:YES];
 
-    if ( [openPanel runModal] == NSOKButton )
+    if([openPanel runModal] == NSOKButton)
     {
         NSURL *selectedURL = [openPanel URL];
         [locations addObject:[selectedURL path]];
         
-        [[NSUserDefaults standardUserDefaults] setValue:[selectedURL path] forKey:@"CurrentLocation"];
-        [[NSUserDefaults standardUserDefaults] setValue:locations forKey:@"Locations"];
-        
+       [[NSUserDefaults standardUserDefaults] setValue:locations forKey:@"Locations"];
         [self updateLocationsMenu];
-        [self loadImages];
+        
+        [self setLocation:[selectedURL path]];
     }
 }
 

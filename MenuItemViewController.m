@@ -24,4 +24,7 @@
     return self;
 }
 
+- (IBAction)deleteButtonSelected:(id)sender
+{
+}
 @end

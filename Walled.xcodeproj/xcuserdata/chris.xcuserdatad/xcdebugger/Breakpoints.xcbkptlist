@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.h"
-         timestampString = "379374180.470776"
+         timestampString = "379460516.702251"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "30"
-         endingLineNumber = "30"
+         startingLineNumber = "31"
+         endingLineNumber = "31"
          landmarkName = "tableArrayController"
          landmarkType = "19">
       </FileBreakpoint>
@@ -99,11 +99,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.h"
-         timestampString = "379374180.470776"
+         timestampString = "379460516.702251"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "44"
-         endingLineNumber = "44">
+         startingLineNumber = "45"
+         endingLineNumber = "45">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -136,11 +136,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "271"
-         endingLineNumber = "271"
+         startingLineNumber = "315"
+         endingLineNumber = "315"
          landmarkName = "@implementation AppDelegate"
          landmarkType = "3">
       </FileBreakpoint>
@@ -149,11 +149,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "303"
-         endingLineNumber = "303"
+         startingLineNumber = "347"
+         endingLineNumber = "347"
          landmarkName = "@implementation AppDelegate"
          landmarkType = "3">
       </FileBreakpoint>
@@ -162,11 +162,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "296"
-         endingLineNumber = "296"
+         startingLineNumber = "340"
+         endingLineNumber = "340"
          landmarkName = "-loadImages"
          landmarkType = "5">
       </FileBreakpoint>
@@ -175,11 +175,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "333"
-         endingLineNumber = "333"
+         startingLineNumber = "377"
+         endingLineNumber = "377"
          landmarkName = "-persistentStoreCoordinator"
          landmarkType = "5">
       </FileBreakpoint>
@@ -214,11 +214,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "263"
-         endingLineNumber = "263"
+         startingLineNumber = "307"
+         endingLineNumber = "307"
          landmarkName = "@implementation AppDelegate"
          landmarkType = "3">
       </FileBreakpoint>
@@ -381,11 +381,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379458873.994357"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "146"
-         endingLineNumber = "146"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "-locationButtonSelected:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -394,11 +394,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "214"
-         endingLineNumber = "214"
+         startingLineNumber = "258"
+         endingLineNumber = "258"
          landmarkName = "-registerDefaultPreferences"
          landmarkType = "5">
       </FileBreakpoint>
@@ -459,11 +459,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379458873.994357"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "171"
-         endingLineNumber = "171"
+         startingLineNumber = "174"
+         endingLineNumber = "174"
          landmarkName = "-locationSelected:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -472,11 +472,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379458873.994357"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "153"
-         endingLineNumber = "153"
+         startingLineNumber = "156"
+         endingLineNumber = "156"
          landmarkName = "-locationButtonSelected:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -550,11 +550,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379458873.994357"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "165"
-         endingLineNumber = "165"
+         startingLineNumber = "168"
+         endingLineNumber = "168"
          landmarkName = "-locationSelected:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -589,11 +589,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         timestampString = "379462705.017739"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "188"
-         endingLineNumber = "188"
+         startingLineNumber = "179"
+         endingLineNumber = "179"
          landmarkName = "-locationSelected:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -601,13 +601,104 @@
          shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
-         filePath = "sexy-wallpaper/AppDelegate.m"
-         timestampString = "379459759.906055"
+         filePath = "sexy-wallpaper/LocationMenuItemView.m"
+         timestampString = "379460920.696325"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "184"
-         endingLineNumber = "184"
-         landmarkName = "-locationSelected:"
+         startingLineNumber = "73"
+         endingLineNumber = "73"
+         landmarkName = "-deleteButtonSelected:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "201"
+         endingLineNumber = "201"
+         landmarkName = "-deleteLocationSelected:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "208"
+         endingLineNumber = "208"
+         landmarkName = "-deleteLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "217"
+         endingLineNumber = "217"
+         landmarkName = "-deleteLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "195"
+         endingLineNumber = "195"
+         landmarkName = "-setLocation:"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "119"
+         endingLineNumber = "119"
+         landmarkName = "-updateLocationsMenu"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462587.099128"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "109"
+         endingLineNumber = "109"
+         landmarkName = "-updateLocationsMenu"
+         landmarkType = "5">
+      </FileBreakpoint>
+      <FileBreakpoint
+         shouldBeEnabled = "No"
+         ignoreCount = "0"
+         continueAfterRunningActions = "No"
+         filePath = "sexy-wallpaper/AppDelegate.m"
+         timestampString = "379462705.017739"
+         startingColumnNumber = "9223372036854775807"
+         endingColumnNumber = "9223372036854775807"
+         startingLineNumber = "115"
+         endingLineNumber = "115"
+         landmarkName = "-updateLocationsMenu"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
