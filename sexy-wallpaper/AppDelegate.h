@@ -14,6 +14,7 @@
 #import "ShadowView.h"
 #import "MenuItemViewController.h"
 #import "LocationMenuItemView.h"
+#import "HelpView.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
@@ -40,5 +41,6 @@
 @property (retain) NSMenu *locationsMenu;
 @property (weak) IBOutlet NSTextField *locationTitle;
 @property (weak) IBOutlet ShadowView *shadowView;
+@property (weak) IBOutlet HelpView *helpView;
 
 @end
