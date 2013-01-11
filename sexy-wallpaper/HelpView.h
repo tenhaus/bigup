@@ -15,4 +15,9 @@
 @property (retain) NSTextField *exitLabel;
 @property (retain) NSTextField *imageLabel;
 
+@property (atomic) NSRect exitButtonLocation;
+@property (atomic) NSRect helpButtonLocation;
+@property (atomic) NSRect locationButtonLocation;
+@property (atomic) NSRect imageViewLocation;
+
 @end

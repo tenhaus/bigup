@@ -46,6 +46,7 @@
     
     [self goFullScreen:screenFrame];
     [self configureBrowserView];
+    [self configureHelpView];
     [self updateLocationsMenu];
     
     [self loadImages];
@@ -88,6 +89,31 @@
     buttonRect.size = NSMakeSize(200, 25);
 
     [self.browserScrollView setHasVerticalScroller:NO];
+}
+
+-(void)configureHelpView
+{
+    NSRect menuRect = self.menuBar.frame;
+    NSRect exitButtonRect = self.exitButton.frame;
+    NSRect exitButtonScreenRect;
+    
+    exitButtonScreenRect.origin.x = exitButtonRect.origin.x;
+    exitButtonScreenRect.origin.y = menuRect.size.height + exitButtonRect.size.height;
+    
+    [self.helpView setExitButtonLocation:exitButtonScreenRect];
+
+    
+    NSRect helpButtonRect = self.helpButton.frame;
+    NSRect helpButtonScreenRect;
+    
+    helpButtonScreenRect.origin.x = helpButtonRect.origin.x;
+    helpButtonScreenRect.origin.y = menuRect.size.height + helpButtonRect.size.height;
+    
+    [self.helpView setHelpButtonLocation:helpButtonScreenRect];
+//    [self.helpView setLocationButtonLocation:<#(NSRect)#>];
+//    [self.helpView setImageViewLocation:<#(NSRect)#>];
+    
+    [self.helpView setNeedsDisplay:YES];
 }
 
 -(void)updateLocationsMenu

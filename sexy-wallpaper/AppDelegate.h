@@ -31,16 +31,21 @@
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 @property (weak) IBOutlet NSArrayController *tableArrayController;
 @property (weak) IBOutlet CustomIkImageBrowserView *browserView;
-@property (weak) IBOutlet NSScrollView *browserScrollView;
 
 @property (unsafe_unretained) IBOutlet ImageBrowserController *imageBrowserController;
 @property (weak) IBOutlet NSView *menuBar;
 
 @property (weak) IBOutlet WallpaperImageView *imageView;
-@property (weak) IBOutlet NSButton *locationsButton;
+
 @property (retain) NSMenu *locationsMenu;
 @property (weak) IBOutlet NSTextField *locationTitle;
 @property (weak) IBOutlet ShadowView *shadowView;
 @property (weak) IBOutlet HelpView *helpView;
+
+
+@property (weak) IBOutlet NSButton *exitButton;
+@property (weak) IBOutlet NSButton *helpButton;
+@property (weak) IBOutlet NSButton *locationsButton;
+@property (weak) IBOutlet NSScrollView *browserScrollView;
 
 @end

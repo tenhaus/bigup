@@ -303,7 +303,7 @@
 											<string key="NSFrameSize">{292, 190}</string>
 											<reference key="NSSuperview" ref="58034010"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="771115007"/>
+											<reference key="NSNextKeyView" ref="1060734839"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowVert">-10</double>
 												<double key="NSShadowBlurRadius">10</double>
@@ -578,11 +578,11 @@
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">NSView</string>
 						</object>
-						<object class="NSCustomView" id="771115007">
+						<object class="NSCustomView" id="1060734839">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">274</int>
+							<int key="NSvFlags">301</int>
 							<array class="NSMutableArray" key="NSSubviews"/>
-							<string key="NSFrame">{{249, 0}, {551, 339}}</string>
+							<string key="NSFrame">{{249, 289}, {551, 339}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
 							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView"/>
@@ -768,9 +768,25 @@
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">helpView</string>
 						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="771115007"/>
+						<reference key="destination" ref="1060734839"/>
 					</object>
 					<int key="connectionID">854</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">exitButton</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="125109152"/>
+					</object>
+					<int key="connectionID">861</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">helpButton</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="645879002"/>
+					</object>
+					<int key="connectionID">862</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -896,7 +912,7 @@
 							<reference ref="139050749"/>
 							<reference ref="10763262"/>
 							<reference ref="187465115"/>
-							<reference ref="771115007"/>
+							<reference ref="1060734839"/>
 						</array>
 						<reference key="parent" ref="972006081"/>
 					</object>
@@ -1029,7 +1045,7 @@
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">853</int>
-						<reference key="object" ref="771115007"/>
+						<reference key="object" ref="1060734839"/>
 						<array class="NSMutableArray" key="children"/>
 						<reference key="parent" ref="439893737"/>
 					</object>
@@ -1106,7 +1122,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">860</int>
+			<int key="maxID">862</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1145,6 +1161,8 @@
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="browserScrollView">NSScrollView</string>
 						<string key="browserView">CustomIkImageBrowserView</string>
+						<string key="exitButton">NSButton</string>
+						<string key="helpButton">NSButton</string>
 						<string key="helpView">HelpView</string>
 						<string key="imageBrowserController">ImageBrowserController</string>
 						<string key="imageView">WallpaperImageView</string>
@@ -1165,6 +1183,14 @@
 						<object class="IBToOneOutletInfo" key="browserView">
 							<string key="name">browserView</string>
 							<string key="candidateClassName">CustomIkImageBrowserView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="exitButton">
+							<string key="name">exitButton</string>
+							<string key="candidateClassName">NSButton</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="helpButton">
+							<string key="name">helpButton</string>
+							<string key="candidateClassName">NSButton</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="helpView">
 							<string key="name">helpView</string>

@@ -34,7 +34,7 @@
 
 -(NSTextField *)createHelpLabelWithString:(NSString *)title
 {
-    NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(100.0, 100.0, 2000.0, self.frame.size.height / 12)];
+    NSTextField *textField = [[NSTextField alloc] initWithFrame:NSMakeRect(100.0, 100.0, 400.0, self.frame.size.height / 12)];
     [textField setStringValue:title];
 
     [textField setBezeled:NO];
@@ -43,13 +43,25 @@
     [textField setSelectable:NO];
     [textField setTextColor:[NSColor yellowColor]];
     [textField setFont:[NSFont systemFontOfSize:self.frame.size.height / 14]];
-    
+    [textField setAlignment:NSRightTextAlignment];
     return textField;
 }
 
 - (void)drawRect:(NSRect)dirtyRect
 {
-    [self.locationLabel setFrameOrigin:NSMakePoint(0.0, 0.0)];
+    NSPoint exitLabelLocation;
+    exitLabelLocation.x = self.exitButtonLocation.origin.x - self.frame.size.width / 6 - self.exitLabel.frame.size.width;
+    exitLabelLocation.y = self.frame.size.height - self.exitButtonLocation.origin.y - self.frame.size.height / 3.5;
+
+    [self.exitLabel setFrameOrigin:exitLabelLocation];
+    
+    NSPoint helpLabelLocation;
+    helpLabelLocation.x = self.helpButtonLocation.origin.x - self.frame.size.width / 6 - self.helpLabel.frame.size.width;;
+    helpLabelLocation.y = self.frame.size.height - self.helpButtonLocation.origin.y - self.frame.size.height / 5;
+
+    [self.helpLabel setFrameOrigin:helpLabelLocation];
+    
+
 }
 
 @end
