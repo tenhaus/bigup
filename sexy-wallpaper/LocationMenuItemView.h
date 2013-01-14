@@ -12,6 +12,7 @@
 
 @property NSString *title;
 
+-(void)setCanDelete:(BOOL)value;
 -(void)setLocation:(NSString *)location;
 
 @property (nonatomic, assign) SEL deleteAction;

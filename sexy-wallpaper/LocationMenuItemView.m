@@ -29,6 +29,11 @@
     [self.locationLabel setTitleWithMnemonic:location];
 }
 
+-(void)setCanDelete:(BOOL)value
+{
+    [self.deleteButton setHidden:value];
+}
+
 - (void)viewDidMoveToWindow
 {
     [self addTrackingRect:self.bounds owner:self userData:nil assumeInside:NO];
