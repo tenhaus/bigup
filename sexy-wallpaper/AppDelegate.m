@@ -243,6 +243,11 @@
     [self deleteLocation:view.title];
 }
 
+- (IBAction)helpButtonClicked:(id)sender
+{
+    [self.helpView setHidden:!self.helpView.isHidden];
+}
+
 -(void)deleteLocation:(NSString *)location
 {
     [self.locationsMenu cancelTracking];

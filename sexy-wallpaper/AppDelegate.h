@@ -27,6 +27,7 @@
 
 - (IBAction)saveAction:(id)sender;
 - (IBAction)deleteLocationSelected:(id)sender;
+- (IBAction)helpButtonClicked:(id)sender;
 
 @property (weak) IBOutlet NSScrollView *wallpaperScrollView;
 @property (weak) IBOutlet NSArrayController *tableArrayController;

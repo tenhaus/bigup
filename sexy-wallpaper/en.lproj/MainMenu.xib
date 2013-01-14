@@ -580,7 +580,7 @@
 						</object>
 						<object class="NSCustomView" id="1060734839">
 							<reference key="NSNextResponder" ref="439893737"/>
-							<int key="NSvFlags">301</int>
+							<int key="NSvFlags">-2147483347</int>
 							<array class="NSMutableArray" key="NSSubviews"/>
 							<string key="NSFrame">{{249, 289}, {551, 339}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
@@ -733,14 +733,6 @@
 					<int key="connectionID">824</int>
 				</object>
 				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
-						<string key="label">quitApplication:</string>
-						<reference key="source" ref="976324537"/>
-						<reference key="destination" ref="125109152"/>
-					</object>
-					<int key="connectionID">827</int>
-				</object>
-				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">menuBar</string>
 						<reference key="source" ref="976324537"/>
@@ -787,6 +779,22 @@
 						<reference key="destination" ref="645879002"/>
 					</object>
 					<int key="connectionID">862</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">helpButtonClicked:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="645879002"/>
+					</object>
+					<int key="connectionID">864</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">quitApplication:</string>
+						<reference key="source" ref="976324537"/>
+						<reference key="destination" ref="125109152"/>
+					</object>
+					<int key="connectionID">865</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1122,7 +1130,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">862</int>
+			<int key="maxID">865</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1131,6 +1139,7 @@
 					<string key="superclassName">NSObject</string>
 					<dictionary class="NSMutableDictionary" key="actions">
 						<string key="deleteLocationSelected:">id</string>
+						<string key="helpButtonClicked:">id</string>
 						<string key="locationButtonSelected:">id</string>
 						<string key="locationSelected:">id</string>
 						<string key="quitApplication:">id</string>
@@ -1139,6 +1148,10 @@
 					<dictionary class="NSMutableDictionary" key="actionInfosByName">
 						<object class="IBActionInfo" key="deleteLocationSelected:">
 							<string key="name">deleteLocationSelected:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="helpButtonClicked:">
+							<string key="name">helpButtonClicked:</string>
 							<string key="candidateClassName">id</string>
 						</object>
 						<object class="IBActionInfo" key="locationButtonSelected:">
