@@ -95,23 +95,37 @@
 {
     NSRect menuRect = self.menuBar.frame;
     NSRect exitButtonRect = self.exitButton.frame;
-    NSRect exitButtonScreenRect;
+    NSRect exitButtonScreenRect = exitButtonRect;
     
     exitButtonScreenRect.origin.x = exitButtonRect.origin.x;
-    exitButtonScreenRect.origin.y = menuRect.size.height + exitButtonRect.size.height;
+    exitButtonScreenRect.origin.y = self.window.frame.size.height - menuRect.size.height + exitButtonRect.size.height;
     
     [self.helpView setExitButtonLocation:exitButtonScreenRect];
 
     
     NSRect helpButtonRect = self.helpButton.frame;
-    NSRect helpButtonScreenRect;
+    NSRect helpButtonScreenRect = helpButtonRect;
     
     helpButtonScreenRect.origin.x = helpButtonRect.origin.x;
-    helpButtonScreenRect.origin.y = menuRect.size.height + helpButtonRect.size.height;
+    helpButtonScreenRect.origin.y = self.window.frame.size.height - menuRect.size.height + helpButtonRect.size.height;
     
     [self.helpView setHelpButtonLocation:helpButtonScreenRect];
-//    [self.helpView setLocationButtonLocation:<#(NSRect)#>];
-//    [self.helpView setImageViewLocation:<#(NSRect)#>];
+
+    NSRect locationButtonRect = self.locationsButton.frame;
+    NSRect locationButtonScreenRect = locationButtonRect;
+    
+    locationButtonScreenRect.origin.x = locationButtonRect.origin.x;
+    locationButtonScreenRect.origin.y = self.window.frame.size.height - menuRect.size.height + locationButtonRect.size.height;
+    
+    [self.helpView setLocationButtonLocation:locationButtonScreenRect];
+    
+    NSRect imageViewRect = self.wallpaperScrollView.frame;
+    NSRect imageViewScreenRect;
+    
+    imageViewScreenRect.origin.x = imageViewRect.origin.x;
+    imageViewScreenRect.origin.y = imageViewRect.size.height;
+    
+    [self.helpView setImageViewLocation:imageViewScreenRect];
     
     [self.helpView setNeedsDisplay:YES];
 }
