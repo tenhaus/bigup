@@ -26,6 +26,7 @@
 		8380C06F165C9B3A002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
+		83986C7716B1A50A0071D89B /* icons.icns in Resources */ = {isa = PBXBuildFile; fileRef = 83986C7616B1A50A0071D89B /* icons.icns */; };
 		83A2D9BA1678D2DE0048F9C6 /* WallpaperImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */; };
 		83A3221D168554C10032B56B /* help_48.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A3221C168554C10032B56B /* help_48.png */; };
 		83AB18701684342A001C1BED /* ShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83AB186F1684342A001C1BED /* ShadowView.m */; };
@@ -81,6 +82,7 @@
 		8380C076165C9B3A002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C078165C9B3A002D81E7 /* sexy_wallpaperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sexy_wallpaperTests.h; sourceTree = "<group>"; };
 		8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sexy_wallpaperTests.m; sourceTree = "<group>"; };
+		83986C7616B1A50A0071D89B /* icons.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = icons.icns; sourceTree = "<group>"; };
 		83A2D9B81678D2DE0048F9C6 /* WallpaperImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WallpaperImageView.h; sourceTree = "<group>"; };
 		83A2D9B91678D2DE0048F9C6 /* WallpaperImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WallpaperImageView.m; sourceTree = "<group>"; };
 		83A3221C168554C10032B56B /* help_48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = help_48.png; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 		8380C052165C9B39002D81E7 /* sexy-wallpaper */ = {
 			isa = PBXGroup;
 			children = (
+				83986C7616B1A50A0071D89B /* icons.icns */,
 				830326FF169CC95200069FA8 /* LocationMenuItemView.h */,
 				83032700169CC95200069FA8 /* LocationMenuItemView.m */,
 				830326FA169CC6C600069FA8 /* MenuItemViewController.h */,
@@ -305,6 +308,7 @@
 				8324F0B6168389F1002F9A3E /* locations.png in Resources */,
 				83A3221D168554C10032B56B /* help_48.png in Resources */,
 				830326FE169CC6C600069FA8 /* MenuItemViewController.xib in Resources */,
+				83986C7716B1A50A0071D89B /* icons.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
