@@ -10,6 +10,7 @@
 		830326FD169CC6C600069FA8 /* MenuItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830326FB169CC6C600069FA8 /* MenuItemViewController.m */; };
 		830326FE169CC6C600069FA8 /* MenuItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 830326FC169CC6C600069FA8 /* MenuItemViewController.xib */; };
 		83032701169CC95200069FA8 /* LocationMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83032700169CC95200069FA8 /* LocationMenuItemView.m */; };
+		8315F67B16B980D3000BC5C4 /* Credits.html in Resources */ = {isa = PBXBuildFile; fileRef = 8315F67A16B980D3000BC5C4 /* Credits.html */; };
 		8324F0B6168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		8324F0B7168389F1002F9A3E /* locations.png in Resources */ = {isa = PBXBuildFile; fileRef = 8324F0B5168389F1002F9A3E /* locations.png */; };
 		832ECE161667F2F300465951 /* ImageBrowserController.m in Sources */ = {isa = PBXBuildFile; fileRef = 832ECE151667F2F300465951 /* ImageBrowserController.m */; };
@@ -54,6 +55,7 @@
 		830326FC169CC6C600069FA8 /* MenuItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MenuItemViewController.xib; path = ../MenuItemViewController.xib; sourceTree = "<group>"; };
 		830326FF169CC95200069FA8 /* LocationMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationMenuItemView.h; sourceTree = "<group>"; };
 		83032700169CC95200069FA8 /* LocationMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationMenuItemView.m; sourceTree = "<group>"; };
+		8315F67A16B980D3000BC5C4 /* Credits.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = Credits.html; path = ../Credits.html; sourceTree = "<group>"; };
 		8324F0B5168389F1002F9A3E /* locations.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locations.png; sourceTree = "<group>"; };
 		832ECE141667F2F300465951 /* ImageBrowserController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageBrowserController.h; sourceTree = "<group>"; };
 		832ECE151667F2F300465951 /* ImageBrowserController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageBrowserController.m; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 		8380C053165C9B39002D81E7 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8315F67A16B980D3000BC5C4 /* Credits.html */,
 				8380C054165C9B39002D81E7 /* Walled-Info.plist */,
 				8380C055165C9B39002D81E7 /* InfoPlist.strings */,
 				8380C058165C9B39002D81E7 /* main.m */,
@@ -309,6 +312,7 @@
 				83A3221D168554C10032B56B /* help_48.png in Resources */,
 				830326FE169CC6C600069FA8 /* MenuItemViewController.xib in Resources */,
 				83986C7716B1A50A0071D89B /* icons.icns in Resources */,
+				8315F67B16B980D3000BC5C4 /* Credits.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +442,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
 			};
@@ -462,7 +466,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
 			};
 			name = Release;
