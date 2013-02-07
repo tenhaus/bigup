@@ -3,12 +3,12 @@
 	<data>
 		<int key="IBDocument.SystemTarget">1080</int>
 		<string key="IBDocument.SystemVersion">12C60</string>
-		<string key="IBDocument.InterfaceBuilderVersion">2844</string>
+		<string key="IBDocument.InterfaceBuilderVersion">3084</string>
 		<string key="IBDocument.AppKitVersion">1187.34</string>
 		<string key="IBDocument.HIToolboxVersion">625.00</string>
 		<dictionary class="NSMutableDictionary" key="IBDocument.PluginVersions">
-			<string key="com.apple.InterfaceBuilder.CocoaPlugin">2844</string>
-			<string key="com.apple.imagekit.ibplugin">1810</string>
+			<string key="com.apple.InterfaceBuilder.CocoaPlugin">3084</string>
+			<string key="com.apple.imagekit.ibplugin">2053</string>
 		</dictionary>
 		<array key="IBDocument.IntegratedClassDependencies">
 			<string>IKImageBrowserView</string>
@@ -50,7 +50,7 @@
 				<array class="NSMutableArray" key="NSMenuItems">
 					<object class="NSMenuItem" id="694149608">
 						<reference key="NSMenu" ref="649796088"/>
-						<string key="NSTitle">Walled</string>
+						<string key="NSTitle">Bigup</string>
 						<string key="NSKeyEquiv"/>
 						<int key="NSKeyEquivModMask">1048576</int>
 						<int key="NSMnemonicLoc">2147483647</int>
@@ -64,11 +64,11 @@
 						</object>
 						<string key="NSAction">submenuAction:</string>
 						<object class="NSMenu" key="NSSubmenu" id="110575045">
-							<string key="NSTitle">Walled</string>
+							<string key="NSTitle">Bigup</string>
 							<array class="NSMutableArray" key="NSMenuItems">
 								<object class="NSMenuItem" id="238522557">
 									<reference key="NSMenu" ref="110575045"/>
-									<string key="NSTitle">About Walled</string>
+									<string key="NSTitle">About Bigup</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="35465992"/>
@@ -87,7 +87,7 @@
 								</object>
 								<object class="NSMenuItem" id="632727374">
 									<reference key="NSMenu" ref="110575045"/>
-									<string key="NSTitle">Quit Walled</string>
+									<string key="NSTitle">Quit Bigup</string>
 									<string key="NSKeyEquiv">q</string>
 									<int key="NSKeyEquivModMask">1048576</int>
 									<int key="NSMnemonicLoc">2147483647</int>
@@ -122,12 +122,12 @@
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{335, 390}, {800, 628}}</string>
 				<int key="NSWTFlags">1954025472</int>
-				<string key="NSWindowTitle">Walled</string>
+				<string key="NSWindowTitle">Bigup</string>
 				<string key="NSWindowClass">CustomWindow</string>
 				<nil key="NSViewClass"/>
 				<nil key="NSUserInterfaceItemIdentifier"/>
 				<object class="NSView" key="NSWindowView" id="439893737">
-					<reference key="NSNextResponder"/>
+					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">256</int>
 					<array class="NSMutableArray" key="NSSubviews">
 						<object class="NSScrollView" id="896519677">
@@ -302,8 +302,7 @@
 											</set>
 											<string key="NSFrameSize">{292, 190}</string>
 											<reference key="NSSuperview" ref="58034010"/>
-											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="1060734839"/>
+											<reference key="NSNextKeyView" ref="649720752"/>
 											<object class="NSShadow" key="NSViewShadow">
 												<double key="NSShadowVert">-10</double>
 												<double key="NSShadowBlurRadius">10</double>
@@ -331,7 +330,6 @@
 									</array>
 									<string key="NSFrameSize">{292, 190}</string>
 									<reference key="NSSuperview" ref="896519677"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="77353830"/>
 									<string key="NSReuseIdentifierKey">_NS:11</string>
 									<reference key="NSDocView" ref="77353830"/>
@@ -346,7 +344,6 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {16, 190}}</string>
 									<reference key="NSSuperview" ref="896519677"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="818367071"/>
 									<string key="NSReuseIdentifierKey">_NS:26</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -360,7 +357,6 @@
 									<int key="NSvFlags">-2147483392</int>
 									<string key="NSFrame">{{-100, -100}, {292, 16}}</string>
 									<reference key="NSSuperview" ref="896519677"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="58034010"/>
 									<string key="NSReuseIdentifierKey">_NS:30</string>
 									<bool key="NSAllowsLogicalLayoutDirection">NO</bool>
@@ -372,8 +368,7 @@
 							</array>
 							<string key="NSFrame">{{163, 360}, {292, 190}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="649720752"/>
+							<reference key="NSNextKeyView" ref="58034010"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">202752</int>
@@ -398,7 +393,6 @@
 							</set>
 							<string key="NSFrameSize">{800, 628}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="10763262"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
@@ -419,7 +413,6 @@
 							<int key="NSvFlags">274</int>
 							<string key="NSFrame">{{0, 268}, {100, 100}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="896519677"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">ShadowView</string>
@@ -434,7 +427,6 @@
 									<array class="NSMutableArray" key="NSSubviews"/>
 									<string key="NSFrame">{{664, 48}, {82, 32}}</string>
 									<reference key="NSSuperview" ref="10763262"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="125109152"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<bool key="NSEnabled">YES</bool>
@@ -468,7 +460,6 @@
 									<array class="NSMutableArray" key="NSSubviews"/>
 									<string key="NSFrame">{{20, 41}, {48, 48}}</string>
 									<reference key="NSSuperview" ref="10763262"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="805091198"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<bool key="NSEnabled">YES</bool>
@@ -498,7 +489,6 @@
 									<array class="NSMutableArray" key="NSSubviews"/>
 									<string key="NSFrame">{{748, 49}, {32, 32}}</string>
 									<reference key="NSSuperview" ref="10763262"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="187465115"/>
 									<string key="NSReuseIdentifierKey">_NS:9</string>
 									<bool key="NSEnabled">YES</bool>
@@ -527,7 +517,6 @@
 									<int key="NSvFlags">270</int>
 									<string key="NSFrame">{{84, 49}, {473, 24}}</string>
 									<reference key="NSSuperview" ref="10763262"/>
-									<reference key="NSWindow"/>
 									<reference key="NSNextKeyView" ref="645879002"/>
 									<object class="CIAdditionCompositing" key="NSViewCompositeFilter">
 										<bool key="CIEnabled">YES</bool>
@@ -564,7 +553,6 @@
 							</array>
 							<string key="NSFrame">{{0, 517}, {800, 111}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
 							<reference key="NSNextKeyView" ref="91474367"/>
 							<bool key="NSViewIsLayerTreeHost">YES</bool>
 							<object class="NSShadow" key="NSViewShadow">
@@ -584,15 +572,11 @@
 							<array class="NSMutableArray" key="NSSubviews"/>
 							<string key="NSFrame">{{249, 289}, {551, 339}}</string>
 							<reference key="NSSuperview" ref="439893737"/>
-							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<string key="NSClassName">HelpView</string>
 						</object>
 					</array>
 					<string key="NSFrameSize">{800, 628}</string>
-					<reference key="NSSuperview"/>
-					<reference key="NSWindow"/>
 					<reference key="NSNextKeyView" ref="139050749"/>
 					<bool key="NSViewIsLayerTreeHost">YES</bool>
 				</object>
