@@ -141,8 +141,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "401"
          endingLineNumber = "401"
-         landmarkName = "@implementation AppDelegate"
-         landmarkType = "3">
+         landmarkName = "-applicationFilesDirectory"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -154,8 +154,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "441"
          endingLineNumber = "441"
-         landmarkName = "@implementation AppDelegate"
-         landmarkType = "3">
+         landmarkName = "-persistentStoreCoordinator"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -167,7 +167,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "429"
          endingLineNumber = "429"
-         landmarkName = "-loadImages"
+         landmarkName = "-persistentStoreCoordinator"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -180,8 +180,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "471"
          endingLineNumber = "471"
-         landmarkName = "-persistentStoreCoordinator"
-         landmarkType = "5">
+         landmarkName = "@implementation AppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -219,8 +219,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "393"
          endingLineNumber = "393"
-         landmarkName = "@implementation AppDelegate"
-         landmarkType = "3">
+         landmarkName = "-loadImages"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -373,7 +373,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "335"
          endingLineNumber = "335"
-         landmarkName = "-registerDefaultPreferences"
+         landmarkName = "-handleUserSelectedBackground:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -841,8 +841,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "405"
          endingLineNumber = "405"
-         landmarkName = "-loadImages"
-         landmarkType = "5">
+         landmarkName = "@implementation AppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -854,7 +854,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "391"
          endingLineNumber = "391"
-         landmarkName = "-displayImageAtURL:onScreen:"
+         landmarkName = "-loadImages"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -867,7 +867,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "304"
          endingLineNumber = "304"
-         landmarkName = "-rememberLocation:"
+         landmarkName = "-registerDefaultPreferences"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -880,7 +880,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "301"
          endingLineNumber = "301"
-         landmarkName = "-rememberLocation:"
+         landmarkName = "-addLocationClicked"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -893,7 +893,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "408"
          endingLineNumber = "408"
-         landmarkName = "-loadImages"
+         landmarkName = "-managedObjectModel"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -906,7 +906,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "317"
          endingLineNumber = "317"
-         landmarkName = "-currentLocation"
+         landmarkName = "-quitApplication:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -919,7 +919,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "322"
          endingLineNumber = "322"
-         landmarkName = "-currentLocation"
+         landmarkName = "-handleUserSelectedBackground:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>
