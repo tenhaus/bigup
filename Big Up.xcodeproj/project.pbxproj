@@ -23,7 +23,6 @@
 		8380C060165C9B39002D81E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C05F165C9B39002D81E7 /* AppDelegate.m */; };
 		8380C063165C9B39002D81E7 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8380C061165C9B39002D81E7 /* MainMenu.xib */; };
 		8380C066165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8380C064165C9B39002D81E7 /* sexy_wallpaper.xcdatamodeld */; };
-		8380C06E165C9B3A002D81E7 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C06D165C9B3A002D81E7 /* SenTestingKit.framework */; };
 		8380C06F165C9B3A002D81E7 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8380C04C165C9B39002D81E7 /* Cocoa.framework */; };
 		8380C077165C9B3A002D81E7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8380C075165C9B3A002D81E7 /* InfoPlist.strings */; };
 		8380C07A165C9B3A002D81E7 /* sexy_wallpaperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8380C079165C9B3A002D81E7 /* sexy_wallpaperTests.m */; };
@@ -79,8 +78,7 @@
 		8380C05F165C9B39002D81E7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8380C062165C9B39002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		8380C065165C9B39002D81E7 /* sexy_wallpaper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = sexy_wallpaper.xcdatamodel; sourceTree = "<group>"; };
-		8380C06C165C9B3A002D81E7 /* Big UpTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big UpTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		8380C06D165C9B3A002D81E7 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		8380C06C165C9B3A002D81E7 /* Big UpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Big UpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8380C074165C9B3A002D81E7 /* Big UpTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Big UpTests-Info.plist"; sourceTree = "<group>"; };
 		8380C076165C9B3A002D81E7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8380C078165C9B3A002D81E7 /* sexy_wallpaperTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = sexy_wallpaperTests.h; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8380C06E165C9B3A002D81E7 /* SenTestingKit.framework in Frameworks */,
 				8380C06F165C9B3A002D81E7 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8380C048165C9B39002D81E7 /* Big Up.app */,
-				8380C06C165C9B3A002D81E7 /* Big UpTests.octest */,
+				8380C06C165C9B3A002D81E7 /* Big UpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -150,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				8380C04C165C9B39002D81E7 /* Cocoa.framework */,
-				8380C06D165C9B3A002D81E7 /* SenTestingKit.framework */,
 				8380C04E165C9B39002D81E7 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -271,8 +267,8 @@
 			);
 			name = "Big UpTests";
 			productName = "sexy-wallpaperTests";
-			productReference = 8380C06C165C9B3A002D81E7 /* Big UpTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 8380C06C165C9B3A002D81E7 /* Big UpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -280,8 +276,14 @@
 		8380C03F165C9B39002D81E7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0730;
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Christopher Hayen";
+				TargetAttributes = {
+					8380C047165C9B39002D81E7 = {
+						DevelopmentTeam = 63D34JVWUG;
+					};
+				};
 			};
 			buildConfigurationList = 8380C042165C9B39002D81E7 /* Build configuration list for PBXProject "Big Up" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -478,12 +480,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Big Up.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/Big Up-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaper/Big Up-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "Big Up";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -493,12 +497,14 @@
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = "Big Up.entitlements";
 				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/Big Up-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaper/Big Up-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				PRODUCT_NAME = "Big Up";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -508,13 +514,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sexy-wallpaper.app/Contents/MacOS/sexy-wallpaper";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaperTests/Big UpTests-Info.plist";
 				PRODUCT_NAME = "Big UpTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -523,13 +531,15 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/sexy-wallpaper.app/Contents/MacOS/sexy-wallpaper";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "sexy-wallpaper/sexy-wallpaper-Prefix.pch";
 				INFOPLIST_FILE = "sexy-wallpaperTests/Big UpTests-Info.plist";
 				PRODUCT_NAME = "Big UpTests";
 				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
